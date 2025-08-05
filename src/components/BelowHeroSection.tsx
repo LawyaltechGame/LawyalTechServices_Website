@@ -61,4 +61,4 @@ const BelowHeroSection = () => {
   );
 };
 
-export default BelowHeroSection;
+export default BelowHeroSection
