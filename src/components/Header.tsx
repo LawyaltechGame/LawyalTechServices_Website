@@ -77,6 +77,12 @@ const Header = () => {
                   >
                     Legal Writing
                   </Link>
+                  <Link
+                    to="/legal-tech-events"
+                    className="block px-4 py-2 text-[16px] font-medium text-[#111] hover:bg-[#B9CEFF] hover:text-[#333] transition-all duration-200"
+                  >
+                    Legal Tech Events & Conferences
+                  </Link>
                 </div>
               )}
             </li>

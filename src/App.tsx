@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import NewsFlash from './pages/NewsFlash';
 import Contact from './pages/Contact';
 import LegalWriting from './pages/LegalWriting';
+import LegalTechEvents from './pages/LegalTechEvents';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/legal-writing" element={<LegalWriting />} />
+          <Route path="/legal-tech-events" element={<LegalTechEvents />} />
           <Route path="/news-flash" element={<NewsFlash />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
