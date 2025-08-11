@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from 'react';
-import ScrollAnimationWrapper from './ScrollAnimationWrapper';
 
 const ContactUsSection = () => {
   const sectionRef = useRef(null);
