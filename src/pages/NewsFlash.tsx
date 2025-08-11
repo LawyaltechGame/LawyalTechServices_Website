@@ -41,10 +41,10 @@ const NewsFlash = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#c3d0ff]">
-      <div className="pt-20 px-10">
+    <div className="min-h-screen bg-[#f8faf5]">
+      <div className="pt-20 px-10 pb-20">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-[#111] mb-8 font-poppins text-center">News Flash</h1>
+          <h1 className="text-4xl font-bold text-[#050706] mb-8 font-poppins text-center">News Flash</h1>
           <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
             Stay updated with the latest news, announcements, and insights from Lawyal Tech®.
           </p>
@@ -53,14 +53,14 @@ const NewsFlash = () => {
             {newsItems.map((item, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-[#B9CEFF] bg-[#B9CEFF] bg-opacity-20 px-3 py-1 rounded-full">
+                  <span className="text-sm font-medium text-[#D2DE26] bg-[#D2DE26] bg-opacity-20 px-3 py-1 rounded-full">
                     {item.category}
                   </span>
                   <span className="text-sm text-gray-500">{item.date}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-[#111] mb-3 font-poppins">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-[#050706] mb-3 font-poppins">{item.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{item.excerpt}</p>
-                <button className="mt-4 text-[#B9CEFF] font-medium hover:text-[#A8BDFF] transition-colors duration-300">
+                <button className="mt-4 text-[#D2DE26] font-medium hover:text-[#b8c922] transition-colors duration-300">
                   Read More →
                 </button>
               </div>
@@ -68,17 +68,17 @@ const NewsFlash = () => {
           </div>
           
           <div className="mt-16 text-center">
-            <h2 className="text-2xl font-semibold text-[#111] mb-6 font-poppins">Stay Connected</h2>
+            <h2 className="text-2xl font-semibold text-[#050706] mb-6 font-poppins">Stay Connected</h2>
             <p className="text-lg text-gray-700 mb-8">
               Subscribe to our newsletter to receive the latest updates and insights directly in your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email address"
-                className="px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B9CEFF] focus:border-transparent min-w-[300px]"
+                className="w-full px-6 py-3 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4d7cea] focus:border-transparent"
               />
-              <button className="bg-[#B9CEFF] text-[#111] px-8 py-3 rounded-lg font-semibold hover:bg-[#A8BDFF] transition-colors duration-300">
+              <button className="bg-[#D2DE26] text-[#050706] px-8 py-3 mt-5 rounded-lg font-semibold hover:bg-[#b8c922] transition-colors duration-300 w-full sm:w-auto">
                 Subscribe
               </button>
             </div>

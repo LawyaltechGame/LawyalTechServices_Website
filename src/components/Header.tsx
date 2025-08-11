@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logoImage from '../Images/lawyaltech logo with name.png';
 
 const navLinks = [
   { label: 'HOME', href: '/', underline: false },
@@ -42,9 +43,13 @@ const Header = () => {
   };
 
   return (
-    <header className={`bg-[#B9CEFF] px-10 h-20 flex items-center justify-between font-poppins transition-all duration-700 relative z-[50] ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-      <Link to="/" className={`font-medium text-[28px] tracking-wide transition-all duration-700 delay-200 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
-        Lawyal Tech<sup>®</sup>
+    <header className={`bg-white px-10 h-20 flex items-center justify-between font-poppins transition-all duration-700 relative z-[50] shadow-sm ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+      <Link to="/" className={`transition-all duration-700 delay-200 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+        <img 
+          src={logoImage} 
+          alt="Lawyal Tech" 
+          className="h-18 w-auto object-contain"
+        />
       </Link>
       <nav>
         <ul className="flex gap-8 list-none m-0 p-0 items-center">
@@ -58,7 +63,7 @@ const Header = () => {
             >
               <Link
                 to={link.hasDropdown ? '#' : link.href}
-                className={`text-[18px] font-medium text-[#111] pb-0.5 transition-all duration-300 hover:text-[#333] hover:scale-105 ${link.underline ? 'underline underline-offset-4 decoration-2' : 'hover:underline hover:underline-offset-4'} ${location.pathname === link.href ? 'text-[#333] underline underline-offset-4' : ''}`}
+                className={`text-[18px] font-medium text-[#050706] pb-0.5 transition-all duration-300 hover:text-[#D2DE26] hover:scale-105 ${link.underline ? 'underline underline-offset-4 decoration-2' : 'hover:underline hover:underline-offset-4'} ${location.pathname === link.href ? 'text-[#D2DE26] underline underline-offset-4' : ''}`}
                 onClick={link.hasDropdown ? (e) => e.preventDefault() : undefined}
               >
                 {link.label}
@@ -73,13 +78,13 @@ const Header = () => {
                 >
                   <Link
                     to="/legal-writing"
-                    className="block px-4 py-2 text-[16px] font-medium text-[#111] hover:bg-[#B9CEFF] hover:text-[#333] transition-all duration-200"
+                    className="block px-4 py-2 text-[16px] font-medium text-[#050706] hover:bg-[#D2DE26] hover:text-[#050706] transition-all duration-200"
                   >
                     Legal Writing
                   </Link>
                   <Link
                     to="/legal-tech-events"
-                    className="block px-4 py-2 text-[16px] font-medium text-[#111] hover:bg-[#B9CEFF] hover:text-[#333] transition-all duration-200"
+                    className="block px-4 py-2 text-[16px] font-medium text-[#050706] hover:bg-[#D2DE26] hover:text-[#050706] transition-all duration-200"
                   >
                     Legal Tech Events & Conferences
                   </Link>

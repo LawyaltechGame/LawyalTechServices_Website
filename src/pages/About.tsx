@@ -2,7 +2,7 @@ import Footer from '../components/Footer';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#c3d0ff]">
+    <div className="min-h-screen bg-[#F8FAF5]">
       <div className="pt-20 px-10">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-[#111] mb-8 font-poppins">About Us</h1>
