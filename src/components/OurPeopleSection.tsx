@@ -14,7 +14,7 @@ const OurPeopleSection = () => {
           Meet the person<br />
           behind our success
         </h2>
-        <button className="bg-[#050706] text-[#D2DE26] text-lg md:text-xl font-medium rounded-full px-16 py-5 shadow-xl transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#D2DE26] focus:ring-offset-4 transform">
+        <button className="bg-[#050706] text-[#D2DE26] text-lg md:text-xl font-medium rounded-full px-16= py-5 mb-10 shadow-xl transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#D2DE26] focus:ring-offset-4 transform">
           LEARN MORE
         </button>
       </ScrollAnimationWrapper>
@@ -28,10 +28,10 @@ const OurPeopleSection = () => {
         <img
           src={Nabhiha}
           alt="Nabhiha Profile"
-          className="w-80 h-96 object-cover rounded-3xl shadow-xl bg-gray-100"
+          className="w-full max-w-[500px] h-[900px] object-cover rounded-[2.5rem] shadow-md bg-gray-100"
         />
         <div className="mt-6 text-center">
-          <div className="text-2xl font-semibold text-[#050706] leading-tight">Nabhiha</div>
+          <div className="text-2xl font-semibold text-[#050706] leading-tight">Nabiha</div>
           <div className="text-lg text-[#666] font-medium mt-2 tracking-wide">Founder</div>
         </div>
       </ScrollAnimationWrapper>
