@@ -1,58 +1,40 @@
 import ScrollAnimationWrapper from './ScrollAnimationWrapper';
-
-const people = [
-  {
-    src: 'https://images.pexels.com/photos/5322204/pexels-photo-5322204.jpeg?auto=compress&w=600&h=800&fit=crop',
-    alt: 'Person 1',
-    name: 'Rebeca Swanstone',
-    title: 'SOCIAL & PPC EXPERT',
-  },
-  {
-    src: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&w=600&h=800&fit=crop',
-    alt: 'Person 2',
-    name: 'Dean Mayster',
-    title: 'SOCIAL & PPC EXPERT',
-  },
-];
+import Nabhiha from '../Images/Nabhiha Profile pic for Website.png';
 
 const OurPeopleSection = () => {
   return (
-    <section className="w-full bg-white flex flex-col lg:flex-row items-stretch justify-center py-[20vh] px-[4vw] gap-8">
-      {/* Left Side */}
+    <section className="w-full bg-white flex flex-col items-center justify-center py-16 px-8 gap-16">
+      {/* Text Section - Above */}
       <ScrollAnimationWrapper 
-        animationType="slideLeft" 
+        animationType="slideUp" 
         delay={0.2}
-        className="flex-1 -mt-[75vh] flex flex-col justify-center items-start max-w-xl mx-auto lg:mx-0 lg:items-start"
+        className="flex flex-col justify-center items-center max-w-3xl mx-auto text-center"
       >
-        <h2 className="text-[4rem] font-normal text-[#050706] leading-[1.1] mb-12 text-left" style={{wordBreak: 'break-word', letterSpacing: '-0.02em'}}>
-          Meet the<br />people<br />behind our<br />success
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal text-[#050706] leading-tight mb-12" style={{wordBreak: 'break-word', letterSpacing: '-0.02em'}}>
+          Meet the person<br />
+          behind our success
         </h2>
-        <button className="bg-[#050706] text-[#D2DE26] text-xl font-medium rounded-[2.5rem] px-14 py-6 mt-2 shadow-md transition-all duration-200 hover:bg-[#0a0d0a] focus:outline-none">
+        <button className="bg-[#050706] text-[#D2DE26] text-lg md:text-xl font-medium rounded-full px-16 py-5 shadow-xl transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#D2DE26] focus:ring-offset-4 transform">
           LEARN MORE
         </button>
       </ScrollAnimationWrapper>
       
-      {/* Right Side */}
-      <div className="flex-[1.7] flex flex-row gap-8 items-stretch justify-center">
-        {people.map((person, idx) => (
-          <ScrollAnimationWrapper 
-            key={idx}
-            animationType="slideUp" 
-            delay={0.4 + idx * 0.2}
-            className="flex flex-col items-center w-full max-w-[500px]"
-          >
-            <img
-              src={person.src}
-              alt={person.alt}
-              className="w-full max-w-[500px] h-[900px] object-cover rounded-[2.5rem] shadow-md bg-gray-100"
-            />
-            <div className="mt-8 text-center">
-              <div className="text-[2rem] font-semibold text-[#050706] leading-tight">{person.name}</div>
-              <div className="text-lg text-[#666] font-medium mt-2 tracking-wide">{person.title}</div>
-            </div>
-          </ScrollAnimationWrapper>
-        ))}
-      </div>
+      {/* Image Section - Below */}
+      <ScrollAnimationWrapper 
+        animationType="slideUp" 
+        delay={0.4}
+        className="flex flex-col items-center w-full max-w-md"
+      >
+        <img
+          src={Nabhiha}
+          alt="Nabhiha Profile"
+          className="w-80 h-96 object-cover rounded-3xl shadow-xl bg-gray-100"
+        />
+        <div className="mt-6 text-center">
+          <div className="text-2xl font-semibold text-[#050706] leading-tight">Nabhiha</div>
+          <div className="text-lg text-[#666] font-medium mt-2 tracking-wide">Founder</div>
+        </div>
+      </ScrollAnimationWrapper>
     </section>
   );
 };

@@ -18,6 +18,10 @@ const companies = [
   { name: 'A/RAMIS', bold: false, font: 'Montserrat' },
   { name: 'SHARK', bold: true, font: 'Raleway' },
   { name: 'Digitools.', bold: true, font: 'Roboto' },
+  { name: 'Taycoon', bold: false, font: 'Playfair Display' },
+  { name: 'A/RAMIS', bold: false, font: 'Montserrat' },
+  { name: 'SHARK', bold: true, font: 'Raleway' },
+  { name: 'Digitools.', bold: true, font: 'Roboto' },
 ];
 
 const TheyBelieveInUsSection = () => {
