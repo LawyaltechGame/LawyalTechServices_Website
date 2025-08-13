@@ -14,9 +14,14 @@ const OurPeopleSection = () => {
           Meet the person<br />
           behind our success
         </h2>
-        <button className="bg-[#050706] text-[#D2DE26] text-lg md:text-xl font-medium rounded-full px-16= py-5 mb-10 shadow-xl transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#D2DE26] focus:ring-offset-4 transform">
+        <a 
+          href="https://www.linkedin.com/in/nabiha-k-a14b5192/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#050706] text-[#D2DE26] text-lg md:text-xl font-medium rounded-full px-10 py-5 mb-10 shadow-xl transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#D2DE26] focus:ring-offset-4 transform cursor-pointer inline-block text-center"
+        >
           LEARN MORE
-        </button>
+        </a>
       </ScrollAnimationWrapper>
       
       {/* Image Section - Below */}
