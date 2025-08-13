@@ -1,4 +1,3 @@
-import belowHeroImg from '../Images/Below hero section image.avif';
 import ScrollAnimationWrapper from './ScrollAnimationWrapper';
 
 const BelowHeroSection = () => {

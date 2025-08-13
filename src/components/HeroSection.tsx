@@ -1,4 +1,3 @@
-import heroImg from '../Images/Image for Lawyaltechservice hero section.jpg';
 import ScrollAnimationWrapper from './ScrollAnimationWrapper';
 
 const HeroSection = () => {
