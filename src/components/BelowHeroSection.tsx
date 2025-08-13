@@ -9,7 +9,7 @@ const BelowHeroSection = () => {
         <ScrollAnimationWrapper animationType="slideLeft" delay={0.2}>
           <div>
             <img
-              src={belowHeroImg}
+              src="https://www.shutterstock.com/image-photo/whiteboard-woman-brainstorm-boardroom-idea-600nw-2463472225.jpg"
               alt="Below Hero Section"
               className="w-[620px] h-[620px] object-cover rounded-[48px] shadow-2xl hover:shadow-3xl transition-shadow duration-500"
               style={{ maxWidth: '90vw', maxHeight: '90vw' }}

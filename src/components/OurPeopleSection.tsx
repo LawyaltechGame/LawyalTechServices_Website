@@ -28,7 +28,7 @@ const OurPeopleSection = () => {
         <img
           src={Nabhiha}
           alt="Nabhiha Profile"
-          className="w-full max-w-[500px] h-[900px] object-cover rounded-[2.5rem] shadow-md bg-gray-100"
+          className="w-80 h-96 object-cover rounded-3xl shadow-xl bg-gray-100"
         />
         <div className="mt-6 text-center">
           <div className="text-2xl font-semibold text-[#050706] leading-tight">Nabiha</div>

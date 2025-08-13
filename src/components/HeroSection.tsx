@@ -13,8 +13,8 @@ const HeroSection = () => {
               {/* Image container with enhanced styling */}
               <div className="w-full h-full relative">
                 <img 
-                  src={heroImg} 
-                  alt="Hero" 
+                  src="https://thinkshaw.com/wp-content/uploads/2022/10/Proposal-image-scaled-1.jpg"
+                  alt="Hero Section" 
                   className="w-full h-full object-cover rounded-[30px] shadow-xl transition-transform duration-700 hover:scale-105" 
                 />
                 

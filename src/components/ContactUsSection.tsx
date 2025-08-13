@@ -50,19 +50,31 @@ const ContactUsSection = () => {
       </div>
       
       {/* Right Section - Image with Curved Boundary */}
-      <div className={`flex-[1.3] bg-[#f8faf5] relative transition-all duration-1200 ease-out delay-300 ${isVisible ? 'translate-x-0 opacity-100 scale-100' : 'translate-x-20 opacity-0 scale-95'}`}>
-        {/* Image */}
-        <div className="w-full h-full relative overflow-hidden rounded-bl-[80px]">
-          <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-            alt="People working on laptops in office"
-            className={`w-full h-full object-cover rounded-bl-[80px] transition-all duration-1000 delay-500 ${isVisible ? 'scale-100' : 'scale-110'}`}
-          />
-          
-          {/* Overlay gradient for better text contrast if needed */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/5 rounded-bl-[80px]"></div>
+      <div className="flex-[2.1] h-screen overflow-hidden relative">
+          <div className="w-full h-full b-gradient-to-br from-slate-800 via-gray-900 to-gray-900 p-8 relative">
+            {/* Main frame container */}
+            <div className="w-full ml-5 h-full bg-gradient-to-br from-white via-slate-50 to-white rounded-[40px] p-4 shadow-2xl relative overflow-hidden">
+              {/* Image container with enhanced styling */}
+              <div className="w-full h-full relative">
+                <img 
+                  src="https://imageio.forbes.com/specials-images/imageserve/62727b19dc1908dc2c021596/Business-people-shaking-hands-in-the-office--Group-of-business-persons-in-business/960x0.jpg?format=jpg&width=960"
+                  alt="Digital Marketing Analytics and Legal Tech" 
+                  className="w-full h-full object-cover rounded-[30px] shadow-xl transition-transform duration-700 hover:scale-105" 
+                />
+                
+                {/* Corner accent elements with better colors */}
+                <div className="absolute top-4 left-4 w-6 h-6 bg-gradient-to-br from-[#D2DE26] to-[#D2DE26] rounded-full shadow-lg"></div>
+                <div className="absolute top-4 right-4 w-4 h-4 bg-gradient-to-br from-black to-black rounded-full shadow-lg"></div>
+                <div className="absolute bottom-4 left-4 w-4 h-4 bg-gradient-to-br from-black to-black rounded-full shadow-lg"></div>
+                <div className="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-[#D2DE26] to-[#D2DE26] rounded-full shadow-lg"></div>
+              </div>
+            </div>
+            
+            {/* Floating elements with better colors */}
+            <div className="absolute top-20 right-20 w-3 h-3 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full animate-bounce"></div>
+            <div className="absolute bottom-32 left-20 w-2 h-2 bg-gradient-to-br from-slate-400 to-slate-500 rounded-full animate-ping"></div>
+          </div>
         </div>
-      </div>
     </section>
   );
 };
