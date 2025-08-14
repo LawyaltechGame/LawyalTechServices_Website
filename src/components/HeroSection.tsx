@@ -35,15 +35,15 @@ const HeroSection = () => {
       {/* Right Side - Text */}
       <div className="flex-1 flex flex-col justify-center px-[4vw] relative h-screen">
         <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
-          <h1 className="text-[clamp(2.5rem,6vw,6rem)] font-medium leading-[1.05] m-0 text-[#050706] tracking-tight mt-16">
-            Your digital<br />presence is<br />about to sky<br />rocket.
+          <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-medium leading-[1.15] m-0 text-[#050706] tracking-tight mt-">
+          Turning Legal<br />Insight into<br />Digital Impact, One<br />Word at a Time.
           </h1>
         </ScrollAnimationWrapper>
         
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
           <div className="mt-12 bg-[#D2DE26] p-6 rounded-2xl w-[50vw] shadow-lg">
             <span className="text-[#050706] text-lg font-normal leading-relaxed">
-              Use this section to describe your company and the products or services you offer. The goal is to create a connection with the visitor and give them confidence to build a relationship with you.
+            Unleash the power of your legal tech story! We help innovative companies share their vision in a way that resonates. Our goal is to make complex ideas simple and accessible. We craft compelling content that drives real results and sparks meaningful connections.
             </span>
           </div>
         </ScrollAnimationWrapper>

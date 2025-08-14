@@ -9,8 +9,8 @@ const cardData = [
         </svg>
       </div>
     ),
-    title: 'Social Media',
-    desc: 'Transform your social presence with data-driven strategies that engage your audience and drive meaningful conversations across all platforms.',
+    title: 'Craft Compelling Legal Tech Stories',
+    desc: 'We transform complex legal technology concepts into clear, engaging narratives that connect with your audience and highlight your brand’s value.',    
     color: 'from-[#D2DE26] to-[#b8c922]',
     bgColor: 'bg-[#f8faf5]',
     borderColor: 'border-[#D2DE26]'
@@ -24,8 +24,8 @@ const cardData = [
         </svg>
       </div>
     ),
-    title: 'PPC Advertising',
-    desc: 'Maximize your ROI with precision-targeted campaigns that reach the right audience at the perfect moment with compelling ad experiences.',
+    title: 'SEO‑Optimized, Results‑Driven Content',
+    desc: 'From blogs to whitepapers, we create content that boosts visibility, attracts leads, and drives business growth.',
     color: 'from-[#D2DE26] to-[#b8c922]',
     bgColor: 'bg-[#f8faf5]',
     borderColor: 'border-[#D2DE26]'
@@ -38,8 +38,8 @@ const cardData = [
         </svg>
       </div>
     ),
-    title: 'SEO Optimization',
-    desc: 'Dominate search results with comprehensive SEO strategies that boost visibility, drive organic traffic, and establish authority.',
+    title: 'Build Brand Authority and Trust',
+    desc: 'We position you as a thought leader in legal tech with credible, insightful content that showcases your expertise',
     color: 'from-[#D2DE26] to-[#b8c922]',
     bgColor: 'bg-[#f8faf5]',
     borderColor: 'border-[#D2DE26]'
@@ -53,8 +53,8 @@ const cardData = [
         </svg>
       </div>
     ),
-    title: 'Strategic Planning',
-    desc: 'Build winning digital strategies with comprehensive planning that aligns with your business goals and market opportunities.',
+    title: 'Produce Tailored Content for Every Need',
+    desc: 'We craft content that aligns with your goals, tone, and audience - from marketing copy to technical documentation.',
     color: 'from-[#D2DE26] to-[#b8c922]',
     bgColor: 'bg-[#f8faf5]',
     borderColor: 'border-[#D2DE26]'
@@ -72,8 +72,9 @@ const WhatWeDoSection = () => {
             </h2>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We create digital experiences that transform businesses and connect brands with their audiences in meaningful ways.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We craft digital experiences that transform legal tech businesses. Engaging content that educates, inspires, and drives measurable results - connecting brands with their audiences in meaningful ways.
+
             </p>
           </ScrollAnimationWrapper>
         </div>

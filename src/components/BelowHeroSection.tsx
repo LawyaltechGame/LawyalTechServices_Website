@@ -21,13 +21,13 @@ const BelowHeroSection = () => {
       <div className="flex-1 flex flex-col justify-center pl-16 max-w-2xl">
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
           <h2 className="text-[3rem] font-medium leading-tight text-[#050706] mb-8">
-            Creating unique<br />campaigns that<br />help your business<br />grow
+          Amplify Your<br />Legal Tech<br />Brand with Words<br />That Work
           </h2>
         </ScrollAnimationWrapper>
         
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
           <p className="text-lg text-[#666] mb-8 leading-relaxed">
-            Use this section to describe your company and the products you offer. You could share your company's story and details about why you are in business.
+          Transform your legal tech story with us! We bring expertise in contract management, document automation, and AI in law to life through clear, persuasive writing. Our trusted partnerships and industry recognition help us craft content that drives results - from thought leadership to business growth.
           </p>
         </ScrollAnimationWrapper>
         
