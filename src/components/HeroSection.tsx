@@ -35,8 +35,8 @@ const HeroSection = () => {
       {/* Right Side - Text */}
       <div className="flex-1 flex flex-col justify-center px-[4vw] relative h-screen">
         <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
-          <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-medium leading-[1.15] m-0 text-[#050706] tracking-tight mt-">
-          Turning Legal<br />Insight into<br />Digital Impact, One<br />Word at a Time.
+          <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[1.05] m-0 text-[#050706] tracking-tight p-5 mt-16">
+          Translating Legal<br />Insight into<br />Digital Impact.<br />
           </h1>
         </ScrollAnimationWrapper>
         
