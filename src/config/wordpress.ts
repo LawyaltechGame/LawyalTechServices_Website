@@ -12,7 +12,7 @@ export const WORDPRESS_CONFIG = {
   REFRESH_INTERVAL: 60000, // 1 minute instead of 30 seconds
   
   // Number of posts to fetch per page
-  POSTS_PER_PAGE: 12,
+  POSTS_PER_PAGE: 6,
   
   // Enable/disable real-time updates
   ENABLE_REAL_TIME_UPDATES: true,

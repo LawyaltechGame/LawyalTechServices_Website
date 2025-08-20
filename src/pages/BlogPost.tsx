@@ -15,6 +15,7 @@ interface BlogPostData {
     rendered: string;
   };
   date: string;
+  modified?: string;
   link: string;
   _embedded?: {
     'wp:featuredmedia'?: Array<{
@@ -75,6 +76,15 @@ const BlogPost = () => {
       month: 'long',
       day: 'numeric'
     });
+  };
+
+  const getPublishOrUpdated = () => {
+    if (!post) return '';
+    const published = new Date(post.date).getTime();
+    const modified = post.modified ? new Date(post.modified).getTime() : published;
+    const isUpdated = modified > published + 60 * 1000; // consider updated if more than 1 minute newer
+    const useDate = isUpdated ? (post.modified as string) : post.date;
+    return `${isUpdated ? 'Updated' : 'Published'} ${formatDate(useDate)}`;
   };
 
   const getFeaturedImage = () => {
@@ -145,7 +155,7 @@ const BlogPost = () => {
             />
             
             <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
-              <span>{formatDate(post.date)}</span>
+              <span>{getPublishOrUpdated()}</span>
               <span className="text-[#050706]">Legal Writing</span>
             </div>
           </div>

@@ -15,6 +15,7 @@ export interface BlogPost {
     rendered: string;
   };
   date: string;
+  modified?: string;
   link: string;
   _embedded?: {
     'wp:featuredmedia'?: Array<{
@@ -32,6 +33,12 @@ interface UseWordPressPostsReturn {
   refresh: () => Promise<void>;
   hasMore: boolean;
   loadMore: () => Promise<void>;
+  page: number;
+  totalPages: number;
+  totalPosts: number;
+  nextPage: () => Promise<void>;
+  prevPage: () => Promise<void>;
+  goToPage: (pageNum: number) => Promise<void>;
 }
 
 export const useWordPressPosts = (
@@ -44,6 +51,8 @@ export const useWordPressPosts = (
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
+  const [totalPages, setTotalPages] = useState<number>(1);
+  const [totalPosts, setTotalPosts] = useState<number>(0);
   
   const abortControllerRef = useRef<AbortController | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -119,16 +128,37 @@ export const useWordPressPosts = (
       }
       
       const data: BlogPost[] = await response.json();
+
+      // Attempt to read pagination information from headers (if proxy forwards them)
+      const totalPagesHeader = response.headers.get('X-WP-TotalPages') || response.headers.get('x-wp-totalpages');
+      const totalHeader = response.headers.get('X-WP-Total') || response.headers.get('x-wp-total');
+      if (totalPagesHeader) {
+        const parsedTotalPages = parseInt(totalPagesHeader, 10);
+        if (!Number.isNaN(parsedTotalPages)) {
+          setTotalPages(parsedTotalPages);
+        }
+      }
+      if (totalHeader) {
+        const parsedTotal = parseInt(totalHeader, 10);
+        if (!Number.isNaN(parsedTotal)) {
+          setTotalPosts(parsedTotal);
+        }
+      }
       
       if (append) {
         setPosts(prevPosts => [...prevPosts, ...data]);
       } else {
         setPosts(data);
-        setPage(1);
+        setPage(pageNum);
       }
       
       // Check if there are more posts
-      setHasMore(data.length === WORDPRESS_CONFIG.POSTS_PER_PAGE);
+      // Fallback logic when headers are missing
+      if (totalPages > 0) {
+        setHasMore(pageNum < totalPages);
+      } else {
+        setHasMore(data.length === WORDPRESS_CONFIG.POSTS_PER_PAGE);
+      }
       
       setLastUpdated(new Date());
     } catch (err) {
@@ -155,6 +185,29 @@ export const useWordPressPosts = (
       setPage(nextPage);
     }
   }, [loading, hasMore, page, fetchPosts]);
+
+  const nextPageFn = useCallback(async () => {
+    if (!loading && (hasMore || page < totalPages)) {
+      const next = page + 1;
+      await fetchPosts(next, false);
+      setPage(next);
+    }
+  }, [loading, hasMore, page, totalPages, fetchPosts]);
+
+  const prevPageFn = useCallback(async () => {
+    if (!loading && page > 1) {
+      const prev = page - 1;
+      await fetchPosts(prev, false);
+      setPage(prev);
+    }
+  }, [loading, page, fetchPosts]);
+
+  const goToPageFn = useCallback(async (pageNum: number) => {
+    if (!loading && pageNum >= 1 && (totalPages === 0 || pageNum <= totalPages)) {
+      await fetchPosts(pageNum, false);
+      setPage(pageNum);
+    }
+  }, [loading, totalPages, fetchPosts]);
 
   useEffect(() => {
     fetchPosts(1, false);
@@ -183,6 +236,12 @@ export const useWordPressPosts = (
     lastUpdated,
     refresh,
     hasMore,
-    loadMore
+    loadMore,
+    page,
+    totalPages,
+    totalPosts,
+    nextPage: nextPageFn,
+    prevPage: prevPageFn,
+    goToPage: goToPageFn
   };
 };

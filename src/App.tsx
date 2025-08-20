@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-                  <Route path="/legal-writing" element={<WordPressBlog />} />
+          <Route path="/legal-writing" element={<WordPressBlog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/wordpress-test" element={<WordPressTest />} />
         <Route path="/legal-tech-events" element={<LegalTechEvents />} />
