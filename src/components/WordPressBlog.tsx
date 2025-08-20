@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Calendar, Clock, ArrowRight, Search, Filter } from 'lucide-react';
 import { WORDPRESS_CONFIG } from '../config/wordpress';
 import { useWordPressPosts, type BlogPost } from '../hooks/useWordPressPosts';
