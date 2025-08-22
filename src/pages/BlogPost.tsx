@@ -4,9 +4,7 @@ import { WORDPRESS_CONFIG } from '../config/wordpress';
 import { getSimpleProxiedUrl } from '../utils/simpleCorsProxy';
 import {
   addComment as addFirebaseComment,
-  getCommentsForPost as getFirebaseCommentsForPost,
-  subscribeToComments
-} from '../utils/firebaseComments';
+  getCommentsForPost as getFirebaseCommentsForPost} from '../utils/firebaseComments';
 import {
   getCurrentUser as getFirebaseCurrentUser,
   signIn as firebaseSignIn,
