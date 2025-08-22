@@ -36,6 +36,7 @@ const WordPressBlog = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('newest');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   
   const postsPerPage = 6;
 
@@ -55,12 +56,30 @@ const WordPressBlog = ({
     });
   }
 
+  // Category helpers
+  const getPostCategories = (post: BlogPost): string[] => {
+    const termsGroups = post._embedded?.['wp:term'] || [];
+    const categoryTerms = termsGroups.flat().filter(term => (term as any).taxonomy === 'category');
+    const names = categoryTerms.map(term => (term as any).name).filter(Boolean) as string[];
+    return Array.from(new Set(names));
+  };
+
+  const allCategoriesSet = new Set<string>(['All']);
+  posts.forEach(p => getPostCategories(p).forEach(name => allCategoriesSet.add(name)));
+  // Ensure 'News' exists as a selectable category
+  allCategoriesSet.add('News');
+  const availableCategories = Array.from(allCategoriesSet);
+
   // Filter and sort posts
   const filteredPosts = posts
-    .filter(post => 
-      post.title.rendered.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      stripHtml(post.excerpt.rendered).toLowerCase().includes(searchTerm.toLowerCase())
-    )
+    .filter(post => {
+      const matchesSearch = post.title.rendered.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        stripHtml(post.excerpt.rendered).toLowerCase().includes(searchTerm.toLowerCase());
+      if (!matchesSearch) return false;
+      if (selectedCategory === 'All') return true;
+      const categories = getPostCategories(post).map(n => n.toLowerCase());
+      return categories.includes(selectedCategory.toLowerCase());
+    })
     .sort((a, b) => {
       if (sortBy === 'newest') {
         return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -77,7 +96,7 @@ const WordPressBlog = ({
   // Reset current page when search changes
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, sortBy]);
+  }, [searchTerm, sortBy, selectedCategory]);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -226,12 +245,6 @@ const WordPressBlog = ({
             </p>
             <div className="text-sm text-gray-400">
               Last updated: {formatLastUpdated(lastUpdated)}
-              <button
-                onClick={refresh}
-                className="ml-4 text-[#D2DE26] hover:text-[#C5D118] underline transition-colors duration-300"
-              >
-                Refresh
-              </button>
             </div>
           </div>
         </div>
@@ -252,6 +265,19 @@ const WordPressBlog = ({
               />
             </div>
             
+            <div className="flex items-center gap-3">
+              <Filter className="text-gray-400 w-5 h-5" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="bg-black border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-[#D2DE26] focus:outline-none focus:ring-1 focus:ring-[#D2DE26]"
+              >
+                {availableCategories.map(cat => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
+            </div>
+
             <div className="flex items-center gap-3">
               <Filter className="text-gray-400 w-5 h-5" />
               <select

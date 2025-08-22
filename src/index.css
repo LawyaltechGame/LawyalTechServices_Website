@@ -91,3 +91,10 @@ button:hover {
 .prose a:hover {
   color: #A8C0F0;
 }
+
+/* Small button utility to override global button sizing when needed */
+.lt-btn-sm {
+  padding: 0.375rem 0.75rem !important; /* 6px 12px */
+  font-size: 0.875rem !important; /* text-sm */
+  border-radius: 0.5rem !important; /* rounded-lg */
+}

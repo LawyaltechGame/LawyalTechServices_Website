@@ -17,11 +17,18 @@ export interface BlogPost {
   date: string;
   modified?: string;
   link: string;
+  categories?: number[];
   _embedded?: {
     'wp:featuredmedia'?: Array<{
       source_url: string;
       alt_text: string;
     }>;
+    'wp:term'?: Array<Array<{
+      id: number;
+      name: string;
+      slug: string;
+      taxonomy: string;
+    }>>;
   };
 }
 

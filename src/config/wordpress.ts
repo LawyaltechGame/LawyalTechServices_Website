@@ -5,6 +5,7 @@ export const WORDPRESS_CONFIG = {
   
   // API endpoints
   POSTS_ENDPOINT: '/wp-json/wp/v2/posts',
+  COMMENTS_ENDPOINT: '/wp-json/wp/v2/comments',
   
   // Refresh interval for real-time updates (in milliseconds)
   // 30000 = 30 seconds, 60000 = 1 minute
@@ -34,6 +35,14 @@ export const WORDPRESS_CONFIG = {
     'Content-Type': 'application/json',
     // Add any custom headers here if needed
     // 'Authorization': 'Bearer your-token-here',
+  },
+
+  // Helpful URLs for auth on the WordPress site
+  get LOGIN_URL() {
+    return `${this.BASE_URL}/wp-login.php`;
+  },
+  get REGISTER_URL() {
+    return `${this.BASE_URL}/wp-login.php?action=register`;
   }
 };
 
