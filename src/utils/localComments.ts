@@ -12,7 +12,7 @@ export interface LocalUser {
 
 export interface LocalComment {
   id: string;
-  postId: string; // WordPress post id as string for consistency with router param
+  postId: string; // Post id as string for consistency with router param
   authorId: string;
   authorName: string;
   content: string;
