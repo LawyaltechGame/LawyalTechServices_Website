@@ -48,8 +48,8 @@ const HeroSection = () => {
           </div>
         </ScrollAnimationWrapper>
         
-        <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
-          <button className="mt-8 px-8 py-4 w-auto h-auto text-xl font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer self-start transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-xl transform">
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.6} className='px-2 py-5'>
+          <button className="mt-8 px-8 py-4 w-auto h-auto text-xl font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer self-start transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105  transform">
             ABOUT US
           </button>
         </ScrollAnimationWrapper>
