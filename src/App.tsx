@@ -7,7 +7,15 @@ import NewsFlash from './pages/NewsFlash';
 import Contact from './pages/Contact';
 import BlogPost from './pages/BlogPost';
 import LegalTechEvents from './pages/LegalTechEvents';
-import LegalWriting from './pages/LegalWriting';
+import BlogPostsAndArticles from './pages/BlogPostsAndArticles';
+import WebsiteCopy from './pages/WebsiteCopy';
+import EmailTemplates from './pages/EmailTemplates';
+import LandingPages from './pages/LandingPages';
+import CustomLegalApps from './pages/CustomLegalApps';
+import PPCAdCopy from './pages/PPCAdCopy';
+import CaseStudies from './pages/CaseStudies';
+import DisplayAds from './pages/DisplayAds';
+import LeadMagnets from './pages/LeadMagnets';
 
 const App = () => {
   return (
@@ -18,7 +26,15 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/legal-writing" element={<LegalWriting />} />
+          <Route path="/blog-posts" element={<BlogPostsAndArticles />} />
+          <Route path="/website-copy" element={<WebsiteCopy />} />
+          <Route path="/email-templates" element={<EmailTemplates />} />
+          <Route path="/landing-pages" element={<LandingPages />} />
+          <Route path="/custom-legal-apps" element={<CustomLegalApps />} />
+          <Route path="/ppc-ad-copy" element={<PPCAdCopy />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/display-ads" element={<DisplayAds />} />
+          <Route path="/lead-magnets" element={<LeadMagnets />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/legal-tech-events" element={<LegalTechEvents />} />
           <Route path="/news-flash" element={<NewsFlash />} />

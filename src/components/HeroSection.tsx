@@ -48,10 +48,25 @@ const HeroSection = () => {
           </div>
         </ScrollAnimationWrapper>
         
+        {/* Split CTA Section - Replacing About Us button */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6} className='px-2 py-5'>
-          <button className="mt-8 px-8 py-4 w-auto h-auto text-xl font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer self-start transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105  transform">
-            ABOUT US
-          </button>
+          <div className="mt-8 flex gap-4 w-full max-w-xl">
+            {/* For Law Firms CTA */}
+            <button className="flex-1 px-6 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
+              <div className="flex flex-col items-center text-center">
+                <span className="font-bold text-base mb-1">For Law Firms</span>
+                <span className="text-xs opacity-90 leading-tight">Build a client-attracting website & content strategy</span>
+              </div>
+            </button>
+
+            {/* For Legal Tech CTA */}
+            <button className="flex-1 px-6 py-4 text-lg font-medium rounded-full bg-[#D2DE26] text-[#050706] border-none cursor-pointer transition-all duration-300 hover:bg-[#b8c422] hover:scale-105 transform shadow-lg">
+              <div className="flex flex-col items-center text-center">
+                <span className="font-bold text-base mb-1">For Legal Tech</span>
+                <span className="text-xs opacity-90 leading-tight">Translate innovation into thought leadership & growth</span>
+              </div>
+            </button>
+          </div>
         </ScrollAnimationWrapper>
       </div>
     </section>

@@ -57,7 +57,7 @@ const BlogPost = () => {
               Try Again
             </button>
             <button
-              onClick={() => navigate("/legal-writing")}
+              onClick={() => navigate("/blog-posts")}
               className="bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors"
             >
               Back to Blog
@@ -77,7 +77,7 @@ const BlogPost = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="mb-6">
             <Link
-              to="/legal-writing"
+              to="/blog-posts"
               className="inline-flex items-center text-[#050706] hover:text-[#D2DE26] transition-colors"
             >
               <svg
@@ -102,7 +102,7 @@ const BlogPost = () => {
           />
           <div className="flex items-center justify-center gap-4 text-sm text-gray-700">
             <span>Published {formatDate(post.date)}</span>
-            <span className="font-medium">Legal Writing</span>
+            <span className="font-medium">Blog posts & articles</span>
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@ const BlogPost = () => {
         {/* Actions */}
         <div className="mt-10 text-center flex flex-col sm:flex-row justify-center gap-4">
           <Link
-            to="/legal-writing"
+            to="/blog-posts"
             className="bg-[#B9CEFF] text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-[#A8C0F0] transition-colors"
           >
             Back to Blog

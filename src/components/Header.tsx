@@ -42,6 +42,19 @@ const Header = () => {
     }, 200); // 200ms delay
   };
 
+  const services = [
+    { name: 'Blog posts & articles', path: '/blog-posts', icon: '📝' },
+    { name: 'Website copy', path: '/website-copy', icon: '🌐' },
+    { name: 'Email templates & newsletters', path: '/email-templates', icon: '📧' },
+    { name: 'Landing pages', path: '/landing-pages', icon: '🎯' },
+    { name: 'Custom Legal Apps', path: '/custom-legal-apps', icon: '⚖️' },
+    { name: 'PPC ad copy', path: '/ppc-ad-copy', icon: '💰' },
+    { name: 'Case studies & whitepapers', path: '/case-studies', icon: '📊' },
+    { name: 'Display ads', path: '/display-ads', icon: '🖼️' },
+    { name: 'Lead magnets', path: '/lead-magnets', icon: '🧲' },
+    { name: 'Legal Tech Events & Conferences', path: '/legal-tech-events', icon: '🎪' },
+  ];
+
   return (
     <header className={`bg-white px-10 h-20 flex items-center justify-between font-poppins transition-all duration-700 relative z-[50] shadow-sm ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
       <Link to="/" className={`transition-all duration-700 delay-200 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
@@ -68,26 +81,26 @@ const Header = () => {
               >
                 {link.label}
               </Link>
-              {/* Dropdown for Legal Writing */}
+              {/* Dropdown for Services */}
               {link.hasDropdown && dropdownOpen && (
                 <div
-                  className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[200px] border border-gray-200 z-[1000]"
+                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg rounded-lg py-4 px-4 min-w-[600px] border border-gray-200 z-[1000]"
                   onMouseEnter={handleDropdownMouseEnter}
                   onMouseLeave={handleDropdownMouseLeave}
                   style={{zIndex: 1000}}
                 >
-                  <Link
-                    to="/legal-writing"
-                    className="block px-4 py-2 text-[16px] font-medium text-[#050706] hover:bg-[#D2DE26] hover:text-[#050706] transition-all duration-200"
-                  >
-                    Legal Writing
-                  </Link>
-                  <Link
-                    to="/legal-tech-events"
-                    className="block px-4 py-2 text-[16px] font-medium text-[#050706] hover:bg-[#D2DE26] hover:text-[#050706] transition-all duration-200"
-                  >
-                    Legal Tech Events & Conferences
-                  </Link>
+                  <div className="grid grid-cols-2 gap-2">
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.path}
+                        className="flex items-center gap-3 px-3 py-2 text-[14px] font-medium text-[#050706] hover:bg-[#D2DE26] hover:text-[#050706] transition-all duration-200 rounded-md"
+                      >
+                        <span className="text-lg">{service.icon}</span>
+                        <span className="truncate">{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </li>
