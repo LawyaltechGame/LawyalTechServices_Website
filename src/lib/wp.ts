@@ -1,4 +1,4 @@
-export const WP_BASE = "https://legal-tech-writing.lawyaltech.org";
+export const WP_BASE = "https://lawyaltech.org";
 
 export type WpMedia = { source_url?: string; alt_text?: string };
 export type WpPost = {
@@ -48,7 +48,7 @@ async function getProxiedUrl(url: string): Promise<string> {
   return url;
 }
 
-export async function fetchPosts(page = 1, perPage = 6) {
+export async function fetchPosts(perPage = 6, page = 1) {
   const originalUrl = `${WP_BASE}/wp-json/wp/v2/posts?per_page=${perPage}&page=${page}&_embed=1`;
   
   try {
@@ -57,10 +57,21 @@ export async function fetchPosts(page = 1, perPage = 6) {
     if (res.ok) {
       const posts = await res.json();
       const totalPages = Number(res.headers.get("X-WP-TotalPages") || 1);
-      return { posts, totalPages };
+      const totalPosts = Number(res.headers.get("X-WP-Total") || posts.length);
+      console.log('Direct API Response:', { 
+        url: originalUrl,
+        postsCount: posts.length, 
+        totalPages, 
+        totalPosts,
+        headers: {
+          'X-WP-Total': res.headers.get("X-WP-Total"),
+          'X-WP-TotalPages': res.headers.get("X-WP-TotalPages")
+        }
+      });
+      return { posts, totalPages, totalPosts };
     }
   } catch (error) {
-    console.warn('Direct request failed, trying CORS proxy...');
+    console.warn('Direct request failed, trying CORS proxy...', error);
   }
 
   // If direct request fails, try with CORS proxy
@@ -69,7 +80,18 @@ export async function fetchPosts(page = 1, perPage = 6) {
   if (!res.ok) throw new Error("Failed to fetch posts");
   const posts = await res.json();
   const totalPages = Number(res.headers.get("X-WP-TotalPages") || 1);
-  return { posts, totalPages };
+  const totalPosts = Number(res.headers.get("X-WP-Total") || posts.length);
+  console.log('Proxy API Response:', { 
+    url: proxiedUrl,
+    postsCount: posts.length, 
+    totalPages, 
+    totalPosts,
+    headers: {
+      'X-WP-Total': res.headers.get("X-WP-Total"),
+      'X-WP-TotalPages': res.headers.get("X-WP-TotalPages")
+    }
+  });
+  return { posts, totalPages, totalPosts };
 }
 
 export async function fetchPostBySlug(slug: string) {

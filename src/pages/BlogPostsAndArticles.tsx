@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchPosts, formatDate, getFeaturedImage } from "../lib/wp";
+import { fetchPosts, formatDate, getFeaturedImage, WP_BASE } from "../lib/wp";
 import type { WpPost } from "../lib/wp";
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
 
@@ -8,12 +8,42 @@ const BlogPostsAndArticles = () => {
   const [activeTab, setActiveTab] = useState("blogs");
   const [posts, setPosts] = useState<WpPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage] = useState(1);
+  const [, setTotalPages] = useState(1);
+  const [, setTotalPosts] = useState(0);
+  const postsPerPage = 9; // 3x3 grid
 
   useEffect(() => {
     if (activeTab === "blogs") {
-      fetchPosts()
-        .then(({ posts }) => setPosts(posts))
-        .catch(console.error)
+      setLoading(true);
+      
+      // Test the API URL directly
+      const testUrl = `${WP_BASE}/wp-json/wp/v2/posts?per_page=100&page=1&_embed=1`;
+      console.log('Testing WordPress API URL:', testUrl);
+      
+      // Fetch all posts to see what's available
+      fetchPosts(100, 1) // Fetch up to 100 posts per page, page 1
+        .then(({ posts, totalPages, totalPosts }) => {
+          console.log('WordPress API Response:', { 
+            postsCount: posts.length, 
+            totalPages, 
+            totalPosts, 
+            currentPage,
+            posts: posts.map((p: WpPost) => ({ 
+              id: p.id, 
+              title: p.title.rendered, 
+              date: p.date
+            }))
+          });
+          
+          // Show all posts for now to debug
+          setPosts(posts);
+          setTotalPages(Math.ceil(posts.length / postsPerPage));
+          setTotalPosts(posts.length);
+        })
+        .catch((error) => {
+          console.error('Error fetching posts:', error);
+        })
         .finally(() => setLoading(false));
     }
   }, [activeTab]);
