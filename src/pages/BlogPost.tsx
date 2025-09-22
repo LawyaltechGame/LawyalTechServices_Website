@@ -10,6 +10,11 @@ const BlogPost = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Ensure page opens at top when navigating to a post
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [slug]);
+
   useEffect(() => {
     const fetchBlogPost = async () => {
       if (!slug) return;
@@ -69,6 +74,10 @@ const BlogPost = () => {
   }
 
   const featured = getFeaturedImage(post);
+  const embeddedAuthor: any = (post as any)?._embedded?.author?.[0] || null;
+  const authorName = embeddedAuthor?.name || "Lawyal Tech";
+  const authorAvatar = embeddedAuthor?.avatar_urls?.[96] || embeddedAuthor?.avatar_urls?.[48] || null;
+  const authorBio = embeddedAuthor?.description || "We publish practical, client-friendly legal content to help firms build trust and grow.";
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -100,8 +109,11 @@ const BlogPost = () => {
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
             dangerouslySetInnerHTML={{ __html: post.title.rendered }}
           />
-          <div className="flex items-center justify-center gap-4 text-sm text-gray-700">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-sm text-gray-700">
             <span>Published {formatDate(post.date)}</span>
+            <span className="hidden sm:inline">•</span>
+            <span>by {authorName}</span>
+            <span className="hidden sm:inline">•</span>
             <span className="font-medium">Blog posts & articles</span>
           </div>
         </div>
@@ -131,6 +143,27 @@ const BlogPost = () => {
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
           />
         </article>
+
+        {/* Author Bio - visually distinct */}
+        <div className="mt-12 relative overflow-hidden rounded-2xl border border-[#E5EAF5] bg-[#F7FAFF]">
+          <div className="absolute left-0 top-0 h-full w-1 bg-[#B9CEFF]"></div>
+          <div className="p-6 md:p-8 flex gap-5 items-start">
+            {authorAvatar && (
+              <img
+                src={authorAvatar}
+                alt={authorName}
+                className="w-16 h-16 rounded-full object-cover ring-2 ring-[#B9CEFF]"
+              />
+            )}
+            <div>
+              <div className="text-xs uppercase tracking-widest text-gray-500 mb-1">About the author</div>
+              <div className="text-gray-900 font-semibold text-lg">{authorName}</div>
+              <p className="text-gray-700 mt-2 leading-relaxed italic">
+                {authorBio}
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Actions */}
         <div className="mt-10 text-center flex flex-col sm:flex-row justify-center gap-4">

@@ -48,6 +48,7 @@ const Header = () => {
     { name: 'Email templates & newsletters', path: '/email-templates', icon: '📧' },
     { name: 'Landing pages', path: '/landing-pages', icon: '🎯' },
     { name: 'Custom Legal Apps', path: '/custom-legal-apps', icon: '⚖️' },
+    { name: 'Create AI Agents', path: '/create-ai-agents', icon: '🤖' },
     { name: 'PPC ad copy', path: '/ppc-ad-copy', icon: '💰' },
     { name: 'Case studies & whitepapers', path: '/case-studies', icon: '📊' },
     { name: 'Display ads', path: '/display-ads', icon: '🖼️' },

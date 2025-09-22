@@ -12,6 +12,7 @@ import WebsiteCopy from './pages/WebsiteCopy';
 import EmailTemplates from './pages/EmailTemplates';
 import LandingPages from './pages/LandingPages';
 import CustomLegalApps from './pages/CustomLegalApps';
+import CreateAIAgents from './pages/CreateAIAgents';
 import PPCAdCopy from './pages/PPCAdCopy';
 import CaseStudies from './pages/CaseStudies';
 import DisplayAds from './pages/DisplayAds';
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/email-templates" element={<EmailTemplates />} />
           <Route path="/landing-pages" element={<LandingPages />} />
           <Route path="/custom-legal-apps" element={<CustomLegalApps />} />
+          <Route path="/create-ai-agents" element={<CreateAIAgents />} />
           <Route path="/ppc-ad-copy" element={<PPCAdCopy />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/display-ads" element={<DisplayAds />} />
