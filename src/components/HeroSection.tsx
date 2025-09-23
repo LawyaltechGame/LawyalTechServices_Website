@@ -1,4 +1,5 @@
 import ScrollAnimationWrapper from './ScrollAnimationWrapper';
+import heroImage from '../Images/Image for Lawyaltechservice hero section.jpg';
 
 const HeroSection = () => {
   return (
@@ -11,11 +12,22 @@ const HeroSection = () => {
             <div className="w-full h-full bg-gradient-to-br from-white via-slate-50 to-white rounded-[40px] p-4 shadow-2xl relative overflow-hidden">
               {/* Image container with enhanced styling */}
               <div className="w-[40vw] h-full relative">
-                <img 
-                  src="https://thinkshaw.com/wp-content/uploads/2022/10/Proposal-image-scaled-1.jpg"
-                  alt="Hero Section" 
-                  className="w-full h-full object-cover rounded-[30px] shadow-xl transition-transform duration-700 hover:scale-105" 
-                />
+                <picture>
+                  <source srcSet={heroImage} type="image/avif" />
+                  <source srcSet={heroImage} type="image/webp" />
+                  <img 
+                    src={heroImage}
+                    alt="Lawyal Tech marketing collaboration"
+                    className="w-full h-full object-cover rounded-[30px] shadow-xl transition-transform duration-700 hover:scale-105" 
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
+                    sizes="(min-width: 1024px) 40vw, 90vw"
+                    width={1200}
+                    height={1600}
+                    srcSet={`${heroImage} 800w, ${heroImage} 1200w`}
+                  />
+                </picture>
                 
                 {/* Corner accent elements with better colors */}
                 <div className="absolute top-4 left-4 w-6 h-6 bg-gradient-to-br from-[#D2DE26] to-[#D2DE26] rounded-full shadow-lg"></div>
@@ -48,9 +60,9 @@ const HeroSection = () => {
         
         {/* Single CTA */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6} className='px-5 py-8'>
-          <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
+          <a href="https://calendar.app.google/kjahD1qZzZR1aTbW7" target="_blank" rel="noopener noreferrer" className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg inline-block">
             Book a Strategy Call
-          </button>
+          </a>
         </ScrollAnimationWrapper>
       </div>
     </section>

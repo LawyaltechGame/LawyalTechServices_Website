@@ -61,11 +61,6 @@ const WhatWeDoSection = () => {
                     </li>
                   ))}
                 </ul>
-                <button 
-                  className="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-gray-200 text-[#050706] hover:bg-[#D2DE26] hover:border-[#D2DE26] transition-all cursor-pointer"
-                >
-                  Book a Strategy Call
-                </button>
               </div>
             </ScrollAnimationWrapper>
           ))}

@@ -5,10 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/COLOR LOGO.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lawyal Tech Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://legal-tech-writing.lawyaltech.org/wp-content/plugins/elementor/assets/css/frontend.min.css" />
-<link rel="stylesheet" href="https://legal-tech-writing.lawyaltech.org/wp-content/themes/astra/style.css" />
-
+    <!-- Load Poppins non-blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"></noscript>
+    <!-- Preload hero image for faster LCP -->
+    <link rel="preload" as="image" href="/src/Images/Image%20for%20Lawyaltechservice%20hero%20section.jpg" imagesrcset="/src/Images/Image%20for%20Lawyaltechservice%20hero%20section.jpg 1200w" imagesizes="(min-width: 1024px) 40vw, 90vw" fetchpriority="high">
   </head>
   <body>
     <div id="root"></div>

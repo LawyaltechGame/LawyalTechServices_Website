@@ -12,15 +12,9 @@ const LawFirmWebsiteDesignSection = () => {
           </ScrollAnimationWrapper>
           
           <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
-            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-0 leading-relaxed">
               Fast, mobile‑first websites for law firms with clear messaging and calls‑to‑action that turn visitors into consultations.
             </p>
-          </ScrollAnimationWrapper>
-          
-          <ScrollAnimationWrapper animationType="slideUp" delay={0.6} className='py-3'>
-            <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
-              Book a Strategy Call
-            </button>
           </ScrollAnimationWrapper>
         </div>
       </div>

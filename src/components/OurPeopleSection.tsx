@@ -34,6 +34,10 @@ const OurPeopleSection = () => {
           src={Nabhiha}
           alt="Nabhiha Profile"
           className="w-80 h-96 object-cover rounded-3xl shadow-xl bg-gray-100"
+          loading="lazy"
+          decoding="async"
+          width={320}
+          height={384}
         />
         <div className="mt-6 text-center">
           <div className="text-2xl font-semibold text-[#050706] leading-tight">Nabiha</div>

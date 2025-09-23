@@ -63,6 +63,9 @@ const Header = () => {
           src={logoImage} 
           alt="Lawyal Tech" 
           className="h-18 w-auto object-contain"
+          width={160}
+          height={40}
+          decoding="async"
         />
       </Link>
       <nav>

@@ -33,7 +33,7 @@ const ContactUsSection = () => {
       {/* Left Section - Text and CTA */}
       <div className="flex-1 bg-[#f8faf5] flex flex-col justify-center px-[4vw] py-20 relative">
         <div className={`max-w-2xl transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-          <h2 className="text-[4rem] font-normal text-[#050706] leading-[1.05] mb-8 tracking-tight">
+          <h2 className="text-[4.5rem] font-normal text-[#050706] leading-[1.05] mb-8 tracking-tight">
             Book a Strategy<br />
             Call Today
           </h2>
@@ -42,9 +42,9 @@ const ContactUsSection = () => {
             Tell us your goals. We’ll outline a clear plan to grow qualified leads and revenue.
           </p>
           
-          <button className={`bg-[#050706] text-[#D2DE26] text-xl font-medium rounded-full px-12 py-4 transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-xl delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
+          <a href="https://calendar.app.google/kjahD1qZzZR1aTbW7" target="_blank" rel="noopener noreferrer" className={`inline-block bg-[#050706] text-[#D2DE26] text-xl font-medium rounded-full px-12 py-4 transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-xl delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
             Book a Strategy Call
-          </button>
+          </a>
         </div>
       </div>
       
@@ -52,17 +52,21 @@ const ContactUsSection = () => {
       <div className="flex-[2.1] h-screen overflow-hidden relative">
           <div className="w-full h-full b-gradient-to-br from-slate-800 via-gray-900 to-gray-900 p-8 relative">
             {/* Main frame container */}
-            <div className="w-full ml-5 h-full bg-gradient-to-br from-white via-slate-50 to-white rounded-[40px] p-4 shadow-2xl relative overflow-hidden">
+            <div className="w-full ml-5 h-full bg-gradient-to-br from.white via-slate-50 to-white rounded-[40px] p-4 shadow-2xl relative overflow-hidden">
               {/* Image container with enhanced styling */}
               <div className="w-full h-full relative">
                 <img 
                   src="https://imageio.forbes.com/specials-images/imageserve/62727b19dc1908dc2c021596/Business-people-shaking-hands-in-the-office--Group-of-business-persons-in-business/960x0.jpg?format=jpg&width=960"
                   alt="Digital Marketing Analytics and Legal Tech" 
                   className="w-full h-full object-cover rounded-[30px] shadow-xl transition-transform duration-700 hover:scale-105" 
+                  loading="lazy"
+                  decoding="async"
+                  width={960}
+                  height={640}
                 />
                 
                 {/* Corner accent elements with better colors */}
-                <div className="absolute top-4 left-4 w-6 h-6 bg-gradient-to-br from-[#D2DE26] to-[#D2DE26] rounded-full shadow-lg"></div>
+                <div className="absolute top-4 left-4 w-6 h-6 bg-gradient.to-br from-[#D2DE26] to-[#D2DE26] rounded-full shadow-lg"></div>
                 <div className="absolute top-4 right-4 w-4 h-4 bg-gradient-to-br from-black to-black rounded-full shadow-lg"></div>
                 <div className="absolute bottom-4 left-4 w-4 h-4 bg-gradient-to-br from-black to-black rounded-full shadow-lg"></div>
                 <div className="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-[#D2DE26] to-[#D2DE26] rounded-full shadow-lg"></div>

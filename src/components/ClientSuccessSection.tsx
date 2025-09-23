@@ -80,21 +80,6 @@ const ClientSuccessSection = () => {
             </ScrollAnimationWrapper>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <ScrollAnimationWrapper animationType="slideUp" delay={0.6} className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Want results like these?
-            </h3>
-            <p className="text-lg text-gray-700 mb-6">
-              Let’s map your plan to measurable growth.
-            </p>
-            <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
-              Book a Strategy Call
-            </button>
-          </div>
-        </ScrollAnimationWrapper>
       </div>
     </section>
   );

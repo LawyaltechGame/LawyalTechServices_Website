@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useScrollDirection } from '../hooks/useScrollDirection';
 
 interface ScrollAnimationWrapperProps {
@@ -22,11 +22,18 @@ const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({
   triggerOnce = false,
 }) => {
   const ref = useRef(null);
+  const [ready, setReady] = useState(false);
   const isInView = useInView(ref, {
     amount: threshold,
     once: triggerOnce,
   });
   const scrollDirection = useScrollDirection();
+
+  // Defer activation until browser is idle to reduce main-thread work around LCP
+  useEffect(() => {
+    const idle = (window as any).requestIdleCallback || ((cb: any) => setTimeout(cb, 1));
+    idle(() => setReady(true));
+  }, []);
 
   const getAnimationVariants = () => {
     const baseVariants = {
@@ -160,7 +167,7 @@ const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({
       className={`overflow-hidden ${className}`}
       variants={getAnimationVariants()}
       initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
+      animate={ready && isInView ? 'visible' : 'hidden'}
     >
       {children}
     </motion.div>

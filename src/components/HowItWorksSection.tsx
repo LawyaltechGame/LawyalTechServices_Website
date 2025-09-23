@@ -3,35 +3,8 @@ import { useEffect, useState, useRef } from 'react';
 
 const HowItWorksSection = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [timelineHeight, setTimelineHeight] = useState(0);
-  const [timelineOffsetTop, setTimelineOffsetTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
-  const stepRefs = useRef<HTMLDivElement[]>([]);
-
-  // Measure timeline height and offset between first and last steps
-  const measureTimeline = () => {
-    if (!timelineRef.current || stepRefs.current.length < 2) return;
-
-    const first = stepRefs.current[0];
-    const last = stepRefs.current[stepRefs.current.length - 1];
-    if (!first || !last) return;
-
-    const firstRect = first.getBoundingClientRect();
-    const lastRect = last.getBoundingClientRect();
-    const timelineRect = timelineRef.current.getBoundingClientRect();
-
-    // Use centers of the step cards for cleaner alignment
-    const firstCenter = firstRect.top + firstRect.height / 2 + window.scrollY;
-    const lastCenter = lastRect.top + lastRect.height / 2 + window.scrollY;
-    const timelineTop = timelineRect.top + window.scrollY;
-
-    const height = Math.max(0, lastCenter - firstCenter);
-    const offset = Math.max(0, firstCenter - timelineTop);
-
-    setTimelineHeight(height);
-    setTimelineOffsetTop(offset);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,15 +28,12 @@ const HowItWorksSection = () => {
     };
 
     const handleResize = () => {
-      measureTimeline();
       handleScroll();
     };
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    // Initial compute
     setTimeout(() => {
-      measureTimeline();
       handleScroll();
     }, 0);
 
@@ -95,27 +65,23 @@ const HowItWorksSection = () => {
         </ScrollAnimationWrapper>
 
         <div className="relative">
-          {/* Timeline column */}
           <div
             className="absolute left-1/2 transform -translate-x-1/2 hidden md:block z-0 top-0 bottom-0"
             ref={timelineRef}
           >
-            {/* Background timeline (dynamic height) */}
             <div
               className="absolute left-0 w-1 bg-gray-300 rounded-full"
-              style={{ top: `${timelineOffsetTop}px`, height: `${timelineHeight}px` }}
+              style={{ top: `0px`, height: `calc(100% - 4rem)` }}
             ></div>
 
-            {/* Animated progress line */}
             <div
               className="absolute left-0 w-1 bg-gradient-to-b from-[#D2DE26] to-[#a8b821] rounded-full transition-all duration-300 ease-out"
-              style={{ top: `${timelineOffsetTop}px`, height: `${scrollProgress * timelineHeight}px`, boxShadow: '0 0 20px rgba(210, 222, 38, 0.5)' }}
+              style={{ top: `0px`, height: `${scrollProgress * 100}%`, boxShadow: '0 0 20px rgba(210, 222, 38, 0.5)' }}
             ></div>
 
-            {/* Arrow tip */}
             <div
               className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-out"
-              style={{ top: `${timelineOffsetTop + scrollProgress * timelineHeight}px`, opacity: timelineHeight > 0 ? 1 : 0 }}
+              style={{ top: `${scrollProgress * 100}%` }}
             >
               <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-[#D2DE26] drop-shadow-lg"></div>
             </div>
@@ -123,7 +89,7 @@ const HowItWorksSection = () => {
           
           <div className="space-y-12">
             {steps.map((step, index) => (
-              <div key={index} className="relative" ref={(el) => { if (el) stepRefs.current[index] = el; }}>
+              <div key={index} className="relative">
                 <ScrollAnimationWrapper 
                   animationType="slideUp" 
                   delay={0.3 + (index * 0.1)}
@@ -147,13 +113,6 @@ const HowItWorksSection = () => {
             ))}
           </div>
         </div>
-
-        {/* Bottom CTA */}
-        <ScrollAnimationWrapper animationType="slideUp" delay={0.9} className="text-center mt-12">
-          <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
-            Book a Strategy Call
-          </button>
-        </ScrollAnimationWrapper>
       </div>
     </section>
   );

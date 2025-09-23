@@ -63,7 +63,7 @@ const BlogPost = () => {
             </button>
             <button
               onClick={() => navigate("/blog-posts")}
-              className="bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors"
+              className="bg-gray-500 text.white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors"
             >
               Back to Blog
             </button>
@@ -127,6 +127,8 @@ const BlogPost = () => {
               src={featured.src}
               alt={featured.alt}
               className="w-full h-auto rounded-xl shadow-lg"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         )}
@@ -146,13 +148,15 @@ const BlogPost = () => {
 
         {/* Author Bio - visually distinct */}
         <div className="mt-12 relative overflow-hidden rounded-2xl border border-[#E5EAF5] bg-[#F7FAFF]">
-          <div className="absolute left-0 top-0 h-full w-1 bg-[#B9CEFF]"></div>
+          <div className="absolute left-0 top-0 h.full w-1 bg-[#B9CEFF]"></div>
           <div className="p-6 md:p-8 flex gap-5 items-start">
             {authorAvatar && (
               <img
                 src={authorAvatar}
                 alt={authorName}
                 className="w-16 h-16 rounded-full object-cover ring-2 ring-[#B9CEFF]"
+                loading="lazy"
+                decoding="async"
               />
             )}
             <div>

@@ -1,29 +1,33 @@
 import HeroSection from '../components/HeroSection';
-import LawFirmWebsiteDesignSection from '../components/LawFirmWebsiteDesignSection';
-import BelowHeroSection from '../components/BelowHeroSection';
-import WhatWeDoSection from '../components/WhatWeDoSection';
-import HowItWorksSection from '../components/HowItWorksSection';
-import OurPeopleSection from '../components/OurPeopleSection';
-import ClientSuccessSection from '../components/ClientSuccessSection';
-import BenefitsSection from '../components/BenefitsSection';
-import TestimonialsSection from '../components/TestimonialsSection';
-import ContactUsSection from '../components/ContactUsSection';
-import Footer from '../components/Footer';
+import { lazy, Suspense } from 'react';
+
+const LawFirmWebsiteDesignSection = lazy(() => import('../components/LawFirmWebsiteDesignSection'));
+const BelowHeroSection = lazy(() => import('../components/BelowHeroSection'));
+const WhatWeDoSection = lazy(() => import('../components/WhatWeDoSection'));
+const HowItWorksSection = lazy(() => import('../components/HowItWorksSection'));
+const OurPeopleSection = lazy(() => import('../components/OurPeopleSection'));
+const ClientSuccessSection = lazy(() => import('../components/ClientSuccessSection'));
+const BenefitsSection = lazy(() => import('../components/BenefitsSection'));
+const TestimonialsSection = lazy(() => import('../components/TestimonialsSection'));
+const ContactUsSection = lazy(() => import('../components/ContactUsSection'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-[#f8faf5]" style={{overflow: 'visible'}}>
       <HeroSection />
-      <LawFirmWebsiteDesignSection />
-      <BelowHeroSection />
-      <WhatWeDoSection />
-      <HowItWorksSection />
-      <OurPeopleSection />
-      <ClientSuccessSection />
-      <BenefitsSection />
-      <TestimonialsSection />
-      <ContactUsSection />
-      <Footer />
+      <Suspense fallback={<div></div>}> 
+        <LawFirmWebsiteDesignSection />
+        <BelowHeroSection />
+        <WhatWeDoSection />
+        <HowItWorksSection />
+        <OurPeopleSection />
+        <ClientSuccessSection />
+        <BenefitsSection />
+        <TestimonialsSection />
+        <ContactUsSection />
+        <Footer />
+      </Suspense>
     </div>
   );
 };

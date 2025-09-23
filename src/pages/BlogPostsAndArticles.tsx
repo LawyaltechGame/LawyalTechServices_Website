@@ -69,7 +69,6 @@ const BlogPostsAndArticles = () => {
         </div>
       </div>
 
-
       {/* Service Overview Section */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <ScrollAnimationWrapper animationType="slideUp" delay={0.3}>
@@ -223,6 +222,8 @@ const BlogPostsAndArticles = () => {
                           src={f.src}
                           alt={f.alt}
                           className="rounded mb-4 h-40 w-full object-cover"
+                          loading="lazy"
+                          decoding="async"
                         />
                       )}
                       <h3
