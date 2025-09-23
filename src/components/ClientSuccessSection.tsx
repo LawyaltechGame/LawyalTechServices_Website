@@ -4,30 +4,30 @@ const ClientSuccessSection = () => {
   const successStories = [
     {
       metric: "250%",
-      metricLabel: "LEAD INCREASE",
+      metricLabel: "lead increase in 6 months",
       clientType: "Personal Injury Law Firm",
-      challenge: "Outdated website with poor mobile experience and low search rankings",
-      approach: "Complete website redesign with SEO optimization and targeted content strategy",
-      result: "250% increase in qualified leads within 6 months",
-      color: "text-green-500"
+      challenge: "Low search visibility; mobile UX issues",
+      approach: "SEO + content plan; mobile-first redesign",
+      result: "Qualified leads up 250% in 6 months",
+      color: "text-green-600"
     },
     {
       metric: "180%",
-      metricLabel: "TRAFFIC GROWTH",
+      metricLabel: "organic traffic growth",
       clientType: "Family Law Practice",
-      challenge: "Limited online visibility and difficulty attracting local clients",
-      approach: "Local SEO strategy with practice area-specific content and Google My Business optimization",
-      result: "180% increase in organic traffic and 40% more consultation bookings",
-      color: "text-blue-500"
+      challenge: "Limited local reach; few consultations",
+      approach: "Local SEO; practice-area pages; GMB optimization",
+      result: "+180% organic traffic; +40% bookings",
+      color: "text-blue-600"
     },
     {
       metric: "300%",
-      metricLabel: "ROI IMPROVEMENT",
+      metricLabel: "ROI improvement",
       clientType: "Corporate Law Firm",
-      challenge: "Needed to establish thought leadership and attract high-value corporate clients",
-      approach: "Comprehensive content marketing strategy with whitepapers, case studies, and industry insights",
-      result: "300% ROI improvement and recognition as industry thought leaders",
-      color: "text-purple-500"
+      challenge: "Need thought leadership",
+      approach: "Whitepapers, case studies, insights cadence",
+      result: "3× ROI; recognized as industry leaders",
+      color: "text-purple-600"
     }
   ];
 
@@ -41,7 +41,7 @@ const ClientSuccessSection = () => {
               Client Success Stories
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Real results from law firms who transformed their digital presence with our services
+              Proven outcomes from firms who partnered with us
             </p>
           </div>
         </ScrollAnimationWrapper>
@@ -57,41 +57,24 @@ const ClientSuccessSection = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {/* Key Metric */}
                 <div className="text-center mb-6">
-                  <div className={`text-4xl font-bold ${story.color} mb-2`}>
+                  <div className={`text-6xl font-extrabold ${story.color} mb-2`}>
                     {story.metric}
                   </div>
-                  <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                  <div className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
                     {story.metricLabel}
                   </div>
                 </div>
 
                 {/* Client Type */}
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-6 text-center">
                   {story.clientType}
                 </h3>
 
-                {/* Challenge */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-2">Challenge:</h4>
-                  <p className="text-gray-700 leading-relaxed">
-                    {story.challenge}
-                  </p>
-                </div>
-
-                {/* Our Approach */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-2">Our Approach:</h4>
-                  <p className="text-gray-700 leading-relaxed">
-                    {story.approach}
-                  </p>
-                </div>
-
-                {/* Result */}
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Result:</h4>
-                  <p className="text-gray-700 leading-relaxed">
-                    {story.result}
-                  </p>
+                {/* Compact details */}
+                <div className="space-y-3 text-gray-700">
+                  <p><span className="font-semibold text-gray-900">Challenge:</span> {story.challenge}</p>
+                  <p><span className="font-semibold text-gray-900">Approach:</span> {story.approach}</p>
+                  <p><span className="font-semibold text-gray-900">Result:</span> {story.result}</p>
                 </div>
               </div>
             </ScrollAnimationWrapper>
@@ -102,13 +85,13 @@ const ClientSuccessSection = () => {
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6} className="text-center mt-16">
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to join our success stories?
+              Want results like these?
             </h3>
             <p className="text-lg text-gray-700 mb-6">
-              Let's create your own success story with our proven strategies.
+              Let’s map your plan to measurable growth.
             </p>
             <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
-              Start Your Success Story
+              Book a Strategy Call
             </button>
           </div>
         </ScrollAnimationWrapper>

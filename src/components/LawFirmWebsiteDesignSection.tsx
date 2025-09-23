@@ -12,14 +12,14 @@ const LawFirmWebsiteDesignSection = () => {
           </ScrollAnimationWrapper>
           
           <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
-            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Convert visitors into clients with sleek, professional websites designed exclusively for law firms. We combine modern aesthetics with user-friendly functionality and clear calls-to-action—so your site not only looks great but brings you measurable growth.
+            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-10 leading-relaxed">
+              Fast, mobile‑first websites for law firms with clear messaging and calls‑to‑action that turn visitors into consultations.
             </p>
           </ScrollAnimationWrapper>
           
-          <ScrollAnimationWrapper animationType="slideUp" delay={0.6} className='py-5'>
+          <ScrollAnimationWrapper animationType="slideUp" delay={0.6} className='py-3'>
             <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
-              See Our Law Firm Web Packages
+              Book a Strategy Call
             </button>
           </ScrollAnimationWrapper>
         </div>

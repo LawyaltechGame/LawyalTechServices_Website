@@ -67,7 +67,7 @@ const BenefitsSection = () => {
         {/* Bottom CTA */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.7} className="text-center mt-16">
           <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
-            Get Started Today
+            Book a Strategy Call
           </button>
         </ScrollAnimationWrapper>
       </div>

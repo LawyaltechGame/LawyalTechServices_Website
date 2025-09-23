@@ -18,22 +18,22 @@ const BelowHeroSection = () => {
       </div>
       
       {/* Right Side: Text content */}
-      <div className="flex-1 flex flex-col justify-center pl-16 max-w-2xl">
+      <div className="flex-1 flex flex-col justify-center max-w-2xl">
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
-          <h2 className="text-[3rem] font-medium leading-tight text-[#050706] mb-8">
-          Amplify Your<br />Legal Tech<br />Brand with Words<br />That Work
+          <h2 className="text-[2.5rem] font-bold leading-tight text-[#050706] mb-6">
+            Clear messaging for complex legal work
           </h2>
         </ScrollAnimationWrapper>
         
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
-          <p className="text-lg text-[#666] mb-8 leading-relaxed">
-          Transform your legal tech story with us! We bring expertise in contract management, document automation, and AI in law to life through clear, persuasive writing. Our trusted partnerships and industry recognition help us craft content that drives results - from thought leadership to business growth.
+          <p className="text-lg text-[#666] mb-6 leading-relaxed">
+            We turn complex services into simple benefits clients understand—so they inquire sooner.
           </p>
         </ScrollAnimationWrapper>
         
         <ScrollAnimationWrapper animationType="slideUp" delay={0.8}>
-          <button className="px-8 py-4 w-auto h-auto text-xl font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer self-start transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-xl transform">
-            LEARN MORE
+          <button className="px-8 py-4 w-auto h-auto text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer self-start transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-xl transform">
+            Book a Strategy Call
           </button>
         </ScrollAnimationWrapper>
       </div>

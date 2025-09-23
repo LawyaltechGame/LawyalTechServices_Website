@@ -4,10 +4,9 @@ import BelowHeroSection from '../components/BelowHeroSection';
 import WhatWeDoSection from '../components/WhatWeDoSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import OurPeopleSection from '../components/OurPeopleSection';
-import TestimonialsSection from '../components/TestimonialsSection';
-import TheyBelieveInUsSection from '../components/TheyBelieveInUsSection';
-import BenefitsSection from '../components/BenefitsSection';
 import ClientSuccessSection from '../components/ClientSuccessSection';
+import BenefitsSection from '../components/BenefitsSection';
+import TestimonialsSection from '../components/TestimonialsSection';
 import ContactUsSection from '../components/ContactUsSection';
 import Footer from '../components/Footer';
 
@@ -20,10 +19,9 @@ const Home = () => {
       <WhatWeDoSection />
       <HowItWorksSection />
       <OurPeopleSection />
-      <TestimonialsSection />
-      <TheyBelieveInUsSection />
-      <BenefitsSection />
       <ClientSuccessSection />
+      <BenefitsSection />
+      <TestimonialsSection />
       <ContactUsSection />
       <Footer />
     </div>

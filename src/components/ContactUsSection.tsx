@@ -33,18 +33,17 @@ const ContactUsSection = () => {
       {/* Left Section - Text and CTA */}
       <div className="flex-1 bg-[#f8faf5] flex flex-col justify-center px-[4vw] py-20 relative">
         <div className={`max-w-2xl transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-          <h2 className="text-[4.5rem] font-normal text-[#050706] leading-[1.05] mb-8 tracking-tight">
-          Start Your Content<br />
-          Journey with<br />
-          Us Today?
+          <h2 className="text-[4rem] font-normal text-[#050706] leading-[1.05] mb-8 tracking-tight">
+            Book a Strategy<br />
+            Call Today
           </h2>
           
           <p className={`text-lg text-[#050706] leading-relaxed mb-12 max-w-lg transition-all duration-1000 ease-out delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-          We're ready to listen and understand your vision. We'll craft compelling content that speaks to your audience. Let's bring your story to life.
+            Tell us your goals. We’ll outline a clear plan to grow qualified leads and revenue.
           </p>
           
           <button className={`bg-[#050706] text-[#D2DE26] text-xl font-medium rounded-full px-12 py-4 transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-xl delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            CONTACT US
+            Book a Strategy Call
           </button>
         </div>
       </div>
