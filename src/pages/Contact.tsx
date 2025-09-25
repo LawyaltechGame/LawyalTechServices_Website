@@ -1,94 +1,51 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer';
 
 const Contact = () => {
+  useEffect(() => {
+    const existing = document.querySelector('script[data-opnform="widget"]') as HTMLScriptElement | null;
+    const init = () => {
+      try {
+        (window as any).initEmbed && (window as any).initEmbed('customer-support-and-inquiry-form-cym1tl');
+      } catch {}
+    };
+    if (!existing) {
+      const s = document.createElement('script');
+      s.src = 'https://opnform.com/widgets/iframe.min.js';
+      s.async = true;
+      s.dataset.opnform = 'widget';
+      s.onload = init;
+      document.body.appendChild(s);
+    } else {
+      init();
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F8FAF5]">
-      <div className="pt-20 px-10">
+      <div className="pt-20 px-4 md:px-10">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-[#111] mb-8 font-poppins text-center">Contact Us</h1>
-          <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#111] mb-4 md:mb-8 font-poppins text-center">Contact Us</h1>
+          <p className="text-base md:text-lg text-gray-700 mb-8 md:mb-12 text-center max-w-3xl mx-auto">
             Ready to start your next project? Get in touch with us today and let's discuss how we can help bring your vision to life.
           </p>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <h2 className="text-2xl font-semibold text-[#111] mb-6 font-poppins">Send us a Message</h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B9CEFF] focus:border-transparent"
-                      placeholder="Your first name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B9CEFF] focus:border-transparent"
-                      placeholder="Your last name"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                  <input 
-                    type="email" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B9CEFF] focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B9CEFF] focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B9CEFF] focus:border-transparent">
-                    <option value="">Select a service</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="mobile-development">Mobile Development</option>
-                    <option value="cloud-solutions">Cloud Solutions</option>
-                    <option value="ui-ux-design">UI/UX Design</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="consulting">Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B9CEFF] focus:border-transparent"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
-                </div>
-                
-                <button 
-                  type="submit"
-                  className="w-full bg-[#B9CEFF] text-[#111] px-8 py-3 rounded-lg font-semibold hover:bg-[#A8BDFF] transition-colors duration-300"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            {/* Contact Form (OpnForm Embed) */}
+            {/* <div className="bg-white rounded-lg p-0 shadow-lg overflow-hidden">
+              <iframe
+                id="customer-support-and-inquiry-form-cym1tl"
+                src="https://opnform.com/forms/customer-support-and-inquiry-form-cym1tl"
+                style={{ border: 'none', width: '100%', height: '0', minHeight: '800px', display: 'block' }}
+                title="Send Us a Message"
+              />
+            </div> */}
             
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-lg p-8 shadow-lg">
-                <h2 className="text-2xl font-semibold text-[#111] mb-6 font-poppins">Get in Touch</h2>
-                <div className="space-y-6">
+            <div className="space-y-6 md:space-y-8">
+              <div className="bg-white rounded-lg p-6 md:p-8 shadow-lg">
+                <h2 className="text-xl md:text-2xl font-semibold text-[#111] mb-4 md:mb-6 font-poppins">Get in Touch</h2>
+                <div className="space-y-5 md:space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-[#B9CEFF] rounded-full flex items-center justify-center flex-shrink-0">
                       <svg className="w-5 h-5 text-[#111]" fill="currentColor" viewBox="0 0 20 20">
@@ -98,22 +55,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-[#111]">Email</h3>
-                      <p className="text-gray-700">info@lawyaltech.com</p>
-                      <p className="text-gray-700">support@lawyaltech.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-[#B9CEFF] rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-[#111]" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#111]">Office</h3>
-                      <p className="text-gray-700">123 Tech Street</p>
-                      <p className="text-gray-700">Innovation District</p>
-                      <p className="text-gray-700">City, State 12345</p>
+                      <p className="text-gray-700">reach@lawyaltech.org</p>
                     </div>
                   </div>
                   
@@ -125,26 +67,33 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-[#111]">Phone</h3>
-                      <p className="text-gray-700">+1 (555) 123-4567</p>
-                      <p className="text-gray-700">+1 (555) 987-6543</p>
+                      <p className="text-gray-700">+46 764428529</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-[#B9CEFF] rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-[#111]" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-[#111]">Office</h3>
+                      <p className="text-gray-700">Robert Anbergs väg 19, Södertälje, 151 51, Sweden</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-white rounded-lg p-8 shadow-lg">
-                <h2 className="text-2xl font-semibold text-[#111] mb-6 font-poppins">Business Hours</h2>
+              <div className="bg-white rounded-lg p-6 md:p-8 shadow-lg">
+                <h2 className="text-xl md:text-2xl font-semibold text-[#111] mb-4 md:mb-6 font-poppins">Business Hours</h2>
                 <div className="space-y-3">
-                  <div className="flex justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 text-sm md:text-base py-1 border-b border-gray-100">
                     <span className="text-gray-700">Monday - Friday</span>
-                    <span className="font-semibold text-[#111]">9:00 AM - 6:00 PM</span>
+                    <span className="font-semibold text-[#111]">9:00 AM - 5:00 PM CET</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-700">Saturday</span>
-                    <span className="font-semibold text-[#111]">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-700">Sunday</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 text-sm md:text-base py-1 border-b border-gray-100">
+                    <span className="text-gray-700">Saturday & Sunday</span>
                     <span className="font-semibold text-[#111]">Closed</span>
                   </div>
                 </div>

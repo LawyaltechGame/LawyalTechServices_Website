@@ -27,10 +27,8 @@ const companies = [
 const TheyBelieveInUsSection = () => {
   const marqueeRef = useRef<HTMLDivElement | null>(null);
 
-  // Duplicate the companies for seamless infinite scroll
   const marqueeCompanies = [...companies, ...companies];
 
-  // Optional: Pause on hover
   useEffect(() => {
     const marquee = marqueeRef.current;
     if (!marquee) return;
@@ -45,26 +43,25 @@ const TheyBelieveInUsSection = () => {
   }, []);
 
   return (
-    <section className="w-full h-[70vh] bg-white py-24 px-4 flex flex-col items-center">
+    <section className="w-full bg-white py-12 md:py-24 px-4 flex flex-col items-center">
       <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
-        <h2 className="text-[4rem] font-normal text-[#050706] mb-20 text-center leading-tight">
+        <h2 className="text-[2.2rem] md:text-[4rem] font-normal text-[#050706] mb-8 md:mb-20 text-center leading-tight">
           They believe in us
         </h2>
       </ScrollAnimationWrapper>
       
       <ScrollAnimationWrapper animationType="fade" delay={0.4}>
-        <div className="w-full max-w-8xl flex flex-col items-center">
-          <div className="w-full border-t border-[#D2DE26] mb-12" style={{height: 0, borderWidth: '1px', opacity: 0.7}} />
-          <div className="w-full overflow-hidden relative">
+        <div className="w-full max-w-7xl flex flex-col items-center">
+          <div className="w-full border-t border-[#D2DE26] mb-6 md:mb-12" style={{height: 0, borderWidth: '1px', opacity: 0.7}} />
+          <div className="w-full overflow-hidden relative h-12 md:h-16">
             {/* Left fade gradient */}
-            <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            
+            <div className="absolute left-0 top-0 w-12 md:w-20 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
             {/* Right fade gradient */}
-            <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 w-12 md:w-20 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
             
             <div
               ref={marqueeRef}
-              className="flex flex-row items-center gap-12 select-none"
+              className="whitespace-nowrap flex items-center gap-10 md:gap-12 select-none h-full"
               style={{
                 width: 'max-content',
                 animation: 'marquee 18s linear infinite',
@@ -73,11 +70,11 @@ const TheyBelieveInUsSection = () => {
               {marqueeCompanies.map((company, idx) => (
                 <span
                   key={idx}
-                  className={`text-[2.2rem] ${company.bold ? 'font-bold' : 'font-normal'} text-[#050706] flex items-center`}
+                  className={`text-xl md:text-3xl ${company.bold ? 'font-bold' : 'font-normal'} text-[#050706] inline-flex items-center h-full`}
                   style={{ 
                     fontFamily: `${company.font}, sans-serif`, 
                     letterSpacing: company.bold ? '-0.01em' : '0', 
-                    minWidth: '170px', 
+                    minWidth: '140px', 
                     justifyContent: 'center' 
                   }}
                 >

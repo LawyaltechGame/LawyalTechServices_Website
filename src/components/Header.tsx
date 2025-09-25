@@ -13,6 +13,7 @@ const navLinks = [
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
 
@@ -28,7 +29,7 @@ const Header = () => {
   const handleServicesMouseLeave = () => {
     dropdownTimeout.current = setTimeout(() => {
       setDropdownOpen(false);
-    }, 200); // 200ms delay
+    }, 200);
   };
 
   const handleDropdownMouseEnter = () => {
@@ -39,8 +40,10 @@ const Header = () => {
   const handleDropdownMouseLeave = () => {
     dropdownTimeout.current = setTimeout(() => {
       setDropdownOpen(false);
-    }, 200); // 200ms delay
+    }, 200);
   };
+
+  const toggleMobile = () => setMobileOpen((v) => !v);
 
   const services = [
     { name: 'Blog posts & articles', path: '/blog-posts', icon: '📝' },
@@ -57,18 +60,33 @@ const Header = () => {
   ];
 
   return (
-    <header className={`bg-white px-10 h-20 flex items-center justify-between font-poppins transition-all duration-700 relative z-[50] shadow-sm ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-      <Link to="/" className={`transition-all duration-700 delay-200 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+    <header className={`bg-white px-4 md:px-10 h-16 md:h-20 flex items-center justify-between font-poppins transition-all duration-700 relative z-[50] shadow-sm ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+      <Link to="/" className={`transition-all duration-700 delay-200 flex items-center ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
         <img 
           src={logoImage} 
           alt="Lawyal Tech" 
-          className="h-18 w-auto object-contain"
-          width={160}
-          height={40}
+          className="h-auto w-auto max-h-12 md:max-h-18 object-contain"
+          width={200}
+          height={50}
           decoding="async"
         />
       </Link>
-      <nav>
+
+      {/* Mobile hamburger - compact */}
+      <button
+        aria-label="Toggle menu"
+        aria-expanded={mobileOpen}
+        onClick={toggleMobile}
+        className={`md:hidden p-2 rounded-md border border-gray-200 text-[#D2DE26] transition-colors hover:bg-gray-50 absolute -right-4 top-1/2 -translate-y-1/2`}
+        style={{ backgroundColor: 'transparent' }}
+      >
+        <span className={`block w-6 h-0.5 bg-current mb-1 transition-transform duration-300 ${mobileOpen ? 'translate-y-1.5 rotate-45' : ''}`}></span>
+        <span className={`block w-6 h-0.5 bg-current mb-1 transition-opacity duration-200 ${mobileOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+        <span className={`block w-6 h-0.5 bg-current transition-transform duration-300 ${mobileOpen ? '-translate-y-1.5 -rotate-45' : ''}`}></span>
+      </button>
+
+      {/* Desktop nav */}
+      <nav className="hidden md:block">
         <ul className="flex gap-8 list-none m-0 p-0 items-center">
           {navLinks.map((link, index) => (
             <li 
@@ -80,7 +98,7 @@ const Header = () => {
             >
               <Link
                 to={link.hasDropdown ? '#' : link.href}
-                className={`text-[18px] font-medium text-[#050706] pb-0.5 transition-all duration-300 hover:text-[#D2DE26] hover:scale-105 ${link.underline ? 'underline underline-offset-4 decoration-2' : 'hover:underline hover:underline-offset-4'} ${location.pathname === link.href ? 'text-[#D2DE26] underline underline-offset-4' : ''}`}
+                className={`text-[16px] lg:text-[18px] font-medium text-[#050706] pb-0.5 transition-all duration-300 hover:text-[#D2DE26] hover:scale-105 ${link.underline ? 'underline underline-offset-4 decoration-2' : 'hover:underline hover:underline-offset-4'} ${location.pathname === link.href ? 'text-[#D2DE26] underline underline-offset-4' : ''}`}
                 onClick={link.hasDropdown ? (e) => e.preventDefault() : undefined}
               >
                 {link.label}
@@ -111,6 +129,34 @@ const Header = () => {
           ))}
         </ul>
       </nav>
+
+      {/* Mobile drawer */}
+      {mobileOpen && (
+        <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-lg md:hidden">
+          <ul className="flex flex-col py-2">
+            {navLinks.map((link) => (
+              <li key={link.label} className="px-4">
+                {link.hasDropdown ? (
+                  <details>
+                    <summary className="py-3 text-base font-medium text-[#050706] cursor-pointer select-none">{link.label}</summary>
+                    <div className="pl-4 pb-2">
+                      {services.map((s) => (
+                        <Link key={s.path} to={s.path} className="block py-2 text-sm text-[#050706]" onClick={() => setMobileOpen(false)}>
+                          {s.icon} <span className="ml-2">{s.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                ) : (
+                  <Link to={link.href} className={`block py-3 text-base font-medium ${location.pathname === link.href ? 'text-[#D2DE26]' : 'text-[#050706]'}`} onClick={() => setMobileOpen(false)}>
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };

@@ -11,7 +11,7 @@ const OurPeopleSection = () => {
         className="flex flex-col justify-center items-center max-w-3xl mx-auto text-center"
       >
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal text-[#050706] leading-tight mb-12" style={{wordBreak: 'break-word', letterSpacing: '-0.02em'}}>
-          Meet the person<br />
+          Meet the <span className="text-[#D2DE26]">person</span><br />
           behind our success
         </h2>
         <a 
