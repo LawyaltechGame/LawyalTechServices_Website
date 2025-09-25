@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { FaFacebook, FaXTwitter, FaLinkedin, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa6';
 import logoImage from '../Images/lawyaltech logo with name.png';
 
 const Footer = () => {
@@ -79,7 +80,7 @@ const Footer = () => {
             <span className="text-[#050706] text-sm md:text-base">© 2025 All Rights Reserved.</span>
           </div>
 
-          {/* Links and Social - wrapped grid for mobile */}
+          {/* Links and Social */}
           <div className={`w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 items-start transition-all duration-800 ease-out delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
             {/* Main Links */}
             <div className="flex flex-col gap-2">
@@ -98,16 +99,31 @@ const Footer = () => {
               <a href="#" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Strategy</a>
             </div>
 
-            {/* Social Icons */}
+            {/* Social Icons - react-icons */}
             <div className="flex items-center gap-3 md:gap-4">
-              <a href="#" className="w-8 h-8 bg-[#050706] rounded-full flex items-center justify-center text-white hover:bg-[#D2DE26] hover:text-[#050706] transition-all duration-300 text-sm group">
-                <span className="group-hover:scale-110 transition-transform duration-300">f</span>
+              <a href="https://www.facebook.com/nandtlegaltech?mibextid=LQQJ4d&rdid=jFrNT9zSIVxehDeE&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F9kiPgpor7k7Xemvf%2F%3Fmibextid%3DLQQJ4d#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                 className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#1877F2] hover:bg-[#D2DE26] transition-all duration-200">
+                <FaFacebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-8 h-8 bg-[#050706] rounded-full flex items-center justify-center text-white hover:bg-[#D2DE26] hover:text-[#050706] transition-all duration-300 text-sm group">
-                <span className="group-hover:scale-110 transition-transform duration-300">@</span>
+              <a href="https://x.com/lawyaltech" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"
+                 className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-black hover:bg-[#D2DE26] transition-all duration-200">
+                <FaXTwitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-8 h-8 bg-[#050706] rounded-full flex items-center justify-center text-white hover:bg-[#D2DE26] hover:text-[#050706] transition-all duration-300 text-sm group">
-                <span className="group-hover:scale-110 transition-transform duration-300">t</span>
+              <a href="https://www.linkedin.com/company/lawyaltech/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                 className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#0A66C2] hover:bg-[#D2DE26] transition-all duration-200">
+                <FaLinkedin className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/lawyal_tech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                 className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#E4405F] hover:bg-[#D2DE26] transition-all duration-200">
+                <FaInstagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.youtube.com/@LawyalTech-o1v" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+                 className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#FF0000] hover:bg-[#D2DE26] transition-all duration-200">
+                <FaYoutube className="w-5 h-5" />
+              </a>
+              <a href="https://www.tiktok.com/@lawyal.tech?_t=8opmdDpObzs&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok"
+                 className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-black hover:bg-[#D2DE26] transition-all duration-200">
+                <FaTiktok className="w-5 h-5" />
               </a>
             </div>
           </div>
