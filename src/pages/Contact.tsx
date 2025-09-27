@@ -63,6 +63,17 @@ const Contact = () => {
                   </div>
                 </div>
 
+                <div className="mb-5 md:mb-6">
+                  <label htmlFor="company" className="block mb-2 text-sm text-gray-600">Company Name</label>
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="Your Company"
+                    className="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                  />
+                </div>
+
                 <div className="flex flex-col md:flex-row gap-5 md:gap-6 mb-5 md:mb-6">
                   <div className="w-full md:w-1/2">
                     <label htmlFor="email" className="block mb-2 text-sm text-gray-600">Email Address</label>
