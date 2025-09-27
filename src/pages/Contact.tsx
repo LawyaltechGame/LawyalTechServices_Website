@@ -2,31 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import Footer from '../components/Footer';
 
 const Contact = () => {
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<string | null>(null);
+  const [submitting] = useState(false);
+  const [result] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const form = formRef.current;
-    if (!form) return;
-
-    // HTML5 validation
-    if (!form.checkValidity()) {
-      e.preventDefault();
-      form.classList.add('was-validated');
-      // Focus first invalid
-      const invalid = form.querySelector(':invalid') as HTMLElement | null;
-      invalid?.focus();
-      return;
-    }
-
-    setSubmitting(true);
-    setResult('Please wait...');
-  };
 
   return (
     <div className="min-h-screen bg-[#F8FAF5]">
