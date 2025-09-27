@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -18,9 +19,18 @@ import CaseStudies from './pages/CaseStudies';
 import DisplayAds from './pages/DisplayAds';
 import LeadMagnets from './pages/LeadMagnets';
 
+const ScrollToTop = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location.pathname]);
+  return null;
+};
+
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-[#c3d0ff]">
         <Header />
         <Routes>

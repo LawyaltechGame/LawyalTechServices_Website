@@ -42,7 +42,7 @@ const ContactUsSection = () => {
             Tell us your goals. We’ll outline a clear plan to grow qualified leads and revenue.
           </p>
           
-          <a href="https://calendar.app.google/kjahD1qZzZR1aTbW7" target="_blank" rel="noopener noreferrer" className={`inline-block bg-[#050706] text-[#D2DE26] text-lg md:text-xl font-medium rounded-full px-8 md:px-12 py-3 md:py-4 transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-xl delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 md:translate-y-16 opacity-0'}`}>
+          <a href="https://calendar.app.google/kjahD1qZzZR1aTbW7" target="_blank" rel="noopener noreferrer" className={`inline-block bg-[#050706] text-[#D2DE26] text-lg md:text-xl font-medium rounded-full px-8 md:px-10 py-3 md:py-4 transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 hover:shadow-xl delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 md:translate-y-16 opacity-0'}`}>
             Book a Strategy Call
           </a>
         </div>

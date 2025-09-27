@@ -67,7 +67,7 @@ const NewsFlash = () => {
             ))}
           </div>
           
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <h2 className="text-2xl font-semibold text-[#050706] mb-6 font-poppins">Stay Connected</h2>
             <p className="text-lg text-gray-700 mb-8">
               Subscribe to our newsletter to receive the latest updates and insights directly in your inbox.
@@ -82,7 +82,7 @@ const NewsFlash = () => {
                 Subscribe
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

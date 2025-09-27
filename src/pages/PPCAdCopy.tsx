@@ -1,4 +1,5 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import { Link } from 'react-router-dom';
 
 const PPCAdCopy = () => {
   return (
@@ -131,9 +132,9 @@ const PPCAdCopy = () => {
             <p className="text-lg text-gray-700 mb-6">
               Let's create compelling PPC ad copy that maximizes your ROI and generates qualified leads.
             </p>
-            <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
+            <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
               Get Started Today
-            </button>
+            </Link>
           </div>
         </ScrollAnimationWrapper>
       </div>

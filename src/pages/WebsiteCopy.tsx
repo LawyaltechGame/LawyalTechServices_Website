@@ -1,4 +1,5 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import { Link } from 'react-router-dom';
 
 const WebsiteCopy = () => {
   return (
@@ -126,14 +127,14 @@ const WebsiteCopy = () => {
         <ScrollAnimationWrapper animationType="slideUp" delay={0.7}>
           <div className="text-center bg-white rounded-2xl p-8 shadow-xl">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Turn your website into your best client-conversion tool.
+              Clear, persuasive copy that turns visitors into clients.
             </h3>
             <p className="text-lg text-gray-700 mb-6">
-              Let's create compelling website copy that converts visitors into clients and drives measurable results.
+              We write website content that aligns with your brand and converts.
             </p>
-            <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
+            <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
               Get Started Today
-            </button>
+            </Link>
           </div>
         </ScrollAnimationWrapper>
       </div>

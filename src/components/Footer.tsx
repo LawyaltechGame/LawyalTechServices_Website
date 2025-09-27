@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaFacebook, FaXTwitter, FaLinkedin, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 import logoImage from '../Images/lawyaltech logo with name.png';
 
 const Footer = () => {
@@ -51,25 +52,7 @@ const Footer = () => {
                 className="h-14 md:h-20 w-auto object-contain"
               />
             </div>
-            {/* <form onSubmit={handleSubmit} className={`w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-4 transition-all duration-800 ease-out delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-              <div className="flex-1 relative">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email to join our mailing list :)"
-                  className="w-full bg-transparent border-b-2 border-[#050706] border-opacity-30 pb-2 text-[#050706] placeholder-[#050706] placeholder-opacity-60 text-base md:text-lg focus:outline-none focus:border-opacity-60 transition-all duration-300"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-3.5 h-12 rounded-full bg-[#050706] text-[#D2DE26] text-base md:text-lg font-semibold tracking-wide hover:bg-[#0a0d0a] active:scale-[.98] transition-all duration-200 shadow-md self-start"
-              >
-                YES PLEASE
-                <span className="text-xl ml-2">→</span>
-              </button>
-            </form> */}
+            {/* Newsletter form commented out */}
           </div>
         </div>
 
@@ -84,23 +67,26 @@ const Footer = () => {
           <div className={`w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 items-start transition-all duration-800 ease-out delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
             {/* Main Links */}
             <div className="flex flex-col gap-2">
-              <a href="#" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">HOME</a>
-              <a href="#" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">ABOUT</a>
-              <a href="#" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">SERVICES</a>
-              <a href="#" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">NEWS FLASH</a>
-              <a href="#" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">CONTACT</a>
+              <Link to="/" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">Home</Link>
+              <Link to="/about" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">About</Link>
+              <Link to="/services" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">Services</Link>
+              <Link to="/blog-posts" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">Blog</Link>
+              <Link to="/legal-tech-events" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">Legal Tech Events</Link>
+              <Link to="/contact" className="text-[#050706] text-sm md:text-base font-medium hover:text-[#D2DE26] transition-colors duration-300">Contact</Link>
             </div>
 
             {/* Service Links */}
             <div className="flex flex-col gap-2">
-              <a href="#" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Social Media</a>
-              <a href="#" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">PPC</a>
-              <a href="#" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Content Marketing</a>
-              <a href="#" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Strategy</a>
+              <Link to="/blog-posts" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Blog posts & articles</Link>
+              <Link to="/website-copy" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Website copy</Link>
+              <Link to="/landing-pages" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Landing pages</Link>
+              <Link to="/custom-legal-apps" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Custom Legal Apps</Link>
+              <Link to="/ppc-ad-copy" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">PPC ad copy</Link>
+              <Link to="/case-studies" className="text-[#050706] text-sm hover:text-[#D2DE26] transition-colors duration-300">Case studies</Link>
             </div>
 
             {/* Social Icons - react-icons */}
-            <div className="flex items-center gap-3 md:gap-4">
+            <div className="col-span-2 sm:col-span-1 flex flex-wrap items-center justify-center sm:justify-start gap-3 md:gap-4 w-full">
               <a href="https://www.facebook.com/nandtlegaltech?mibextid=LQQJ4d&rdid=jFrNT9zSIVxehDeE&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F9kiPgpor7k7Xemvf%2F%3Fmibextid%3DLQQJ4d#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
                  className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#1877F2] hover:bg-[#D2DE26] transition-all duration-200">
                 <FaFacebook className="w-5 h-5" />

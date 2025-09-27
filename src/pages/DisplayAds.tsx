@@ -1,4 +1,5 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import { Link } from 'react-router-dom';
 
 const DisplayAds = () => {
   return (
@@ -9,7 +10,7 @@ const DisplayAds = () => {
           <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Display Ads</h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Eye-catching display advertising that builds brand awareness and drives engagement
+              Eye-catching display ads that convert across platforms
             </p>
           </ScrollAnimationWrapper>
         </div>
@@ -129,13 +130,16 @@ const DisplayAds = () => {
 
         {/* CTA Section */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.7} className="text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Stay visible where your clients are with display ads that work.
+          <div className="text-center bg-white rounded-2xl p-8 shadow-xl">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Launch high-performing display campaigns.
             </h3>
-            <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
+            <p className="text-lg text-gray-700 mb-6">
+              We design, test, and optimize ads to maximize CTR and conversions.
+            </p>
+            <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
               Get Started Today
-            </button>
+            </Link>
           </div>
         </ScrollAnimationWrapper>
       </div>

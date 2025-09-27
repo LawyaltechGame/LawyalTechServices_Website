@@ -1,4 +1,5 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import { Link } from 'react-router-dom';
 
 const LeadMagnets = () => {
   return (
@@ -188,9 +189,9 @@ const LeadMagnets = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Let's build lead magnets your future clients can't resist.
             </h3>
-            <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
+            <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg inline-block">
               Get Started Today
-            </button>
+            </Link>
           </div>
         </ScrollAnimationWrapper>
       </div>

@@ -108,7 +108,7 @@ const BlogPostsAndArticles = () => {
                 <p className="text-gray-700">As the go-to expert in your field</p>
               </div>
               <div className="text-center p-6 rounded-lg bg-gray-50">
-                <div className="text-4xl mb-4">📱</div>
+                <div className="text-4xl mb-4">🎪</div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Repurposing</h4>
                 <p className="text-gray-700">Ready-made content for social media</p>
               </div>
@@ -181,9 +181,9 @@ const BlogPostsAndArticles = () => {
             <p className="text-lg text-gray-700 mb-6">
               Let's create compelling blog content that builds your reputation and attracts new clients.
             </p>
-            <button className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
+            <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
               Get Started Today
-            </button>
+            </Link>
           </div>
         </ScrollAnimationWrapper>
       </div>

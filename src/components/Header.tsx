@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'HOME', href: '/', underline: false },
   { label: 'ABOUT', href: '/about' },
   { label: 'SERVICES', href: '/services', hasDropdown: true },
-  { label: 'NEWS FLASH', href: '/news-flash' },
+  // { label: 'NEWS FLASH', href: '/news-flash' },
   { label: 'CONTACT', href: '/contact' },
 ];
 
@@ -106,7 +106,7 @@ const Header = () => {
               {/* Dropdown for Services */}
               {link.hasDropdown && dropdownOpen && (
                 <div
-                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg rounded-lg py-4 px-4 min-w-[600px] border border-gray-200 z-[1000]"
+                  className="absolute top-full -right-[9vw] mt-2 bg-white shadow-lg rounded-lg py-4 px-4 min-w-[600px] border border-gray-200 z-[1000]"
                   onMouseEnter={handleDropdownMouseEnter}
                   onMouseLeave={handleDropdownMouseLeave}
                   style={{zIndex: 1000}}
