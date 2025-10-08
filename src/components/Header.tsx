@@ -46,17 +46,18 @@ const Header = () => {
   const toggleMobile = () => setMobileOpen((v) => !v);
 
   const services = [
-    { name: 'Blog posts & articles', path: '/blog-posts', icon: '📝' },
-    { name: 'Website copy', path: '/website-copy', icon: '🌐' },
-    { name: 'Email templates & newsletters', path: '/email-templates', icon: '📧' },
-    { name: 'Landing pages', path: '/landing-pages', icon: '🎯' },
+    { name: 'Thought Leadership Articles', path: '/thought-leadership', icon: '🧠' },
+    { name: 'Case Studies & Client Success Stories', path: '/case-studies', icon: '📊' },
+    { name: 'Website & Practice Area Copywriting', path: '/website-copy', icon: '🌐' },
+    { name: 'Email Campaigns & Newsletters', path: '/email-templates', icon: '📧' },
+    { name: 'Whitepapers & Guides', path: '/whitepapers-guides', icon: '📑' },
+    { name: 'App Development', path: '/app-development', icon: '🛠️' },
+    // Existing services
+    { name: 'Blog Posts & Articles', path: '/blog-posts', icon: '📝' },
+    { name: 'Landing Pages', path: '/landing-pages', icon: '🎯' },
     { name: 'Custom Legal Apps', path: '/custom-legal-apps', icon: '⚖️' },
-    { name: 'Create AI Agents', path: '/create-ai-agents', icon: '🤖' },
-    { name: 'PPC ad copy', path: '/ppc-ad-copy', icon: '💰' },
-    { name: 'Case studies & whitepapers', path: '/case-studies', icon: '📊' },
-    { name: 'Display ads', path: '/display-ads', icon: '🖼️' },
-    { name: 'Lead magnets', path: '/lead-magnets', icon: '🧲' },
-    { name: 'Legal Tech Events & Conferences', path: '/legal-tech-events', icon: '🎪' },
+    { name: 'PPC Ad Copy', path: '/ppc-ad-copy', icon: '💰' },
+    { name: 'Lead Magnets', path: '/lead-magnets', icon: '🧲' },
   ];
 
   return (

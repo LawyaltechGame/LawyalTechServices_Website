@@ -8,13 +8,15 @@ const HeroSection = () => {
       <div className="order-1 flex-1 lg:flex-[1] flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-[3vw] xl:px-[4vw] py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 relative">
         <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
           <h1 className="text-[clamp(2.5rem,4.5vw,2.5rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2.25rem,5.5vw,3.5rem)] lg:text-[clamp(2.5rem,4.5vw,3.75rem)] xl:text-[clamp(3rem,4.8vw,4.25rem)] 2xl:text-[clamp(3.25rem,5vw,4.75rem)] leading-[1.15] sm:leading-[1.1] lg:leading-[1.05] m-0 text-[#050706] tracking-tight font-medium lg:px-5 mt-2 sm:mt-3 md:mt-4 lg:mt-6">
-            Legal Marketing That Drives <span className="text-[#D2DE26]">Measurable</span> Growth
+          Build Authority.<br />
+          <span className="text-[#D2DE26]">Rank Higher.</span><br />
+          Win More Clients.
           </h1>
         </ScrollAnimationWrapper>
         
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
-          <p className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl text-[#050706] max-w-none sm:max-w-2xl lg:px-5 leading-relaxed font-normal">
-            We build high-converting websites and content for law firms and legal tech companies.
+          <p className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl text-[#050706] max-w-none sm:max-w-3xl lg:px-5 leading-relaxed font-normal">
+          We help law firms and legal tech companies attract better clients, rank higher online, and convert more leads through marketing built for the legal industry.
           </p>
         </ScrollAnimationWrapper>
         

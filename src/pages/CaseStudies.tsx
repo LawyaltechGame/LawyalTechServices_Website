@@ -8,7 +8,7 @@ const CaseStudies = () => {
       <div className="bg-[#B9CEFF] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies & Whitepapers</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies & client success stories </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Compelling case studies and whitepapers that showcase your expertise and results
             </p>
