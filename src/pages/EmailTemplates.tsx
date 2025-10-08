@@ -5,10 +5,10 @@ const EmailTemplates = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <div className="bg-[#B9CEFF] py-16">
+      <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Email Templates & Newsletters</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Email Campaigns & Newsletters</h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Engaging email content that nurtures relationships and drives conversions
             </p>

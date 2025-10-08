@@ -56,7 +56,6 @@ const Header = () => {
     { name: 'Blog Posts & Articles', path: '/blog-posts', icon: '📝' },
     { name: 'Landing Pages', path: '/landing-pages', icon: '🎯' },
     { name: 'Custom Legal Apps', path: '/custom-legal-apps', icon: '⚖️' },
-    { name: 'PPC Ad Copy', path: '/ppc-ad-copy', icon: '💰' },
     { name: 'Lead Magnets', path: '/lead-magnets', icon: '🧲' },
   ];
 

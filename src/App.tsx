@@ -12,7 +12,6 @@ import WebsiteCopy from './pages/WebsiteCopy';
 import EmailTemplates from './pages/EmailTemplates';
 import LandingPages from './pages/LandingPages';
 import CustomLegalApps from './pages/CustomLegalApps';
-import PPCAdCopy from './pages/PPCAdCopy';
 import CaseStudies from './pages/CaseStudies';
 import LeadMagnets from './pages/LeadMagnets';
 import ThoughtLeadership from './pages/ThoughtLeadership';
@@ -45,7 +44,6 @@ const App = () => {
           <Route path="/thought-leadership" element={<ThoughtLeadership />} />
           <Route path="/whitepapers-guides" element={<WhitepapersGuides />} />
           <Route path="/app-development" element={<AppDevelopment />} />
-          <Route path="/ppc-ad-copy" element={<PPCAdCopy />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/lead-magnets" element={<LeadMagnets />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
