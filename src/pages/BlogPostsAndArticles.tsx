@@ -60,17 +60,45 @@ const BlogPostsAndArticles = () => {
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog posts and articles</h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Professional legal content creation across multiple platforms and formats
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.25}>
+          <div className=" rounded-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Blog Posts for Law Firms</h2>
+            <p className="text-lg text-gray-700 mb-4">Turn your expertise into authority.</p>
+            <p className="text-gray-700 leading-relaxed">
+              We create SEO-driven blog posts that help you rank higher, earn trust, and attract qualified clients—without risking compliance or credibility.
             </p>
-          </ScrollAnimationWrapper>
+          </div>
+        </ScrollAnimationWrapper>
         </div>
       </div>
 
       {/* Service Overview Section */}
       <div className="max-w-7xl mx-auto px-4 py-16">
+        {/* Added: Intro for Blog Posts for Law Firms */}
+        
+
+        {/* Added: Who This Is For + What You Get */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.3}>
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Who This Is For</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Boutique to mid-sized law firms and legal tech brands that want consistent, high-quality content to build authority, improve visibility, and convert readers into inquiries.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">What You Get</h3>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                <li><span className="font-semibold">SEO-Optimized Articles</span> – Research-backed topics, buyer-intent keywords, topical clusters, and smart internal linking.</li>
+                <li><span className="font-semibold">Thought Leadership</span> – Practice-aware insights that showcase your team’s expertise and point of view.</li>
+                <li><span className="font-semibold">Editorial QA</span> – A multi-step review for accuracy, clarity, tone, and compliance before anything goes live.</li>
+                <li><span className="font-semibold">On-Brand Visuals</span> – Cover images and social carousels to boost engagement.</li>
+                <li><span className="font-semibold">End-to-End Publishing</span> – WordPress or CMS formatting, meta data, alt text, and distribution support for LinkedIn/Instagram/newsletter.</li>
+              </ul>
+            </div>
+          </div>
+        </ScrollAnimationWrapper>
+
         <ScrollAnimationWrapper animationType="slideUp" delay={0.3}>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -172,17 +200,97 @@ const BlogPostsAndArticles = () => {
           </div>
         </ScrollAnimationWrapper>
 
+        {/* Added: Detailed Process List */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.62}>
+          <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Process</h3>
+            <ul className="space-y-3 text-gray-700 max-w-4xl mx-auto">
+              <li><span className="font-semibold">Strategy & Calendar</span> – Map content pillars (explainers, trends, how-tos, use cases and interviews).</li>
+              <li><span className="font-semibold">Research & Outline</span> – Competitive review, keyword selection, and outlines; SME interviews if needed.</li>
+              <li><span className="font-semibold">Writing & Editing</span> – Clear, credible articles in your brand voice with practical takeaways.</li>
+              <li><span className="font-semibold">SEO Polish</span> – Titles, meta descriptions, headings, internal links, and schema-friendly structure.</li>
+              <li><span className="font-semibold">Visuals & Publishing</span> – On-brand graphics, alt text, and WordPress formatting.</li>
+              <li><span className="font-semibold">Distribution</span> – Snippets/carousels for LinkedIn and Instagram, plus a newsletter blurb.</li>
+            </ul>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* Added: Proof & Performance */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.64}>
+          <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4 text-center">Proof & Performance</h3>
+            <p className="text-gray-700 max-w-4xl mx-auto text-center">
+              Topics are mapped to buyer-intent keywords and clustered to build topical authority. Interlinking posts with service pages lifts rankings and conversions over time.
+            </p>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* Added: Plans */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.66}>
+          <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Essentials</h4>
+                  <p className="text-gray-700">3 posts/month, keyword research, on-page SEO, 1 social caption per post.</p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-[#D2DE26] bg-white shadow-md hover:shadow-lg ring-2 ring-[#D2DE26]/40 transition-shadow">
+                <div className="h-1.5 w-full bg-[#D2DE26] rounded-t-2xl" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Growth</h4>
+                  <p className="text-gray-700">4 posts/month, cluster planning, 2 carousels/month, quarterly content review.</p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Authority+</h4>
+                  <p className="text-gray-700">8 posts/month, executive ghostwriting, newsletter roundup, monthly reporting.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* Added: FAQs */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.68}>
+          <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h3>
+            <div className="space-y-6 max-w-3xl mx-auto">
+              <div>
+                <h4 className="font-semibold text-gray-900">How often do you publish?</h4>
+                <p className="text-gray-700">Most clients start with 2–4 posts/month; we scale to your goals and capacity.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900">What’s included in SEO?</h4>
+                <p className="text-gray-700">Keyword research, on-page optimization, internal linking, and meta data for each article.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900">Do you need input from our attorneys?</h4>
+                <p className="text-gray-700">Optional. We can interview SMEs for 15–20 minutes per article or work from approved briefs.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900">How many revisions do we get?</h4>
+                <p className="text-gray-700">Up to three rounds per article to lock tone, facts, and positioning.</p>
+              </div>
+            </div>
+          </div>
+        </ScrollAnimationWrapper>
+
         {/* CTA Section */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.7}>
           <div className="text-center bg-white rounded-2xl p-8 shadow-xl">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Build a content library that works as hard as you do.
+              Ready to turn expertise into authority?
             </h3>
             <p className="text-lg text-gray-700 mb-6">
-              Let's create compelling blog content that builds your reputation and attracts new clients.
+              Book a free blog strategy session and get a tailored 60-day editorial plan.
             </p>
             <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
-              Get Started Today
+              Book a Free Strategy Session
             </Link>
           </div>
         </ScrollAnimationWrapper>
