@@ -97,9 +97,8 @@ const Header = () => {
               onMouseLeave={link.hasDropdown ? handleServicesMouseLeave : undefined}
             >
               <Link
-                to={link.hasDropdown ? '#' : link.href}
+                to={link.href}
                 className={`text-[16px] lg:text-[18px] font-medium text-[#050706] pb-0.5 transition-all duration-300 hover:text-[#D2DE26] hover:scale-105 ${link.underline ? 'underline underline-offset-4 decoration-2' : 'hover:underline hover:underline-offset-4'} ${location.pathname === link.href ? 'text-[#D2DE26] underline underline-offset-4' : ''}`}
-                onClick={link.hasDropdown ? (e) => e.preventDefault() : undefined}
               >
                 {link.label}
               </Link>

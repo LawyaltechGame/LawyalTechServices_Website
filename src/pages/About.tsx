@@ -15,7 +15,7 @@ const About = () => {
             <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
               We’re a legal marketing agency that builds high-converting
               websites and authority content for law firms and legal tech
-              brands. Our team blends data-driven strategy, creative
+              brands.<br /> Our team blends data-driven strategy, creative
               storytelling, and deep industry knowledge to help firms stand out
               in a competitive market.
             </p>
@@ -24,20 +24,14 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-              To help law firms grow with measurable marketing strategies that
-              combine credibility, SEO, and conversion-focused design—so
-              attorneys can focus on winning cases, not chasing clients.
+            To help law firms grow with measurable marketing strategies that combine credibility, SEO, and conversion-focused design — so attorneys can focus on winning cases, not chasing clients.
             </p>
-
             <h2 className="text-xl md:text-2xl font-semibold text-[#111] mb-3 md:mb-4 font-poppins mt-6 md:mt-8">
               Our Vision
             </h2>
             <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-              To be the go-to marketing partner for law firms and legal tech
-              companies that want predictable growth, stronger authority, and
-              scalable systems for client acquisition.
+            To be the go-to marketing partner for law firms and legal tech companies that want predictable growth, stronger authority, and scalable systems for client acquisition.
             </p>
-
             <h2 className="text-xl md:text-2xl font-semibold text-[#111] mb-3 md:mb-4 font-poppins mt-6 md:mt-8">
               Our Values
             </h2>
@@ -60,43 +54,68 @@ const About = () => {
               </li>
             </ul>
             <h2 className="text-xl md:text-2xl font-semibold text-[#111] mb-3 md:mb-4 font-poppins mt-6 md:mt-8">
-            What We Create for Law Firms
+              What We Create for Law Firms
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="bg-[#F9FBF5] border border-[#E6EED8] rounded-lg p-4 md:p-5 shadow-sm">
-                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">Authority Content</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">
+                  Authority Content
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  We turn your expertise into influence through thought leadership articles, LinkedIn posts, blog content, and op-eds that attract the right clients and position you as the go-to attorney in your field.
+                  We turn your expertise into influence through thought
+                  leadership articles, LinkedIn posts, blog content, and op-eds
+                  that attract the right clients and position you as the go-to
+                  attorney in your field.
                 </p>
               </div>
               <div className="bg-[#F9FBF5] border border-[#E6EED8] rounded-lg p-4 md:p-5 shadow-sm">
-                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">Client Proof & Case Studies</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">
+                  Client Proof & Case Studies
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  We build trust by showcasing real results, client wins, and success stories—crafted to demonstrate measurable outcomes and reinforce your authority.
+                  We build trust by showcasing real results, client wins, and
+                  success stories—crafted to demonstrate measurable outcomes and
+                  reinforce your authority.
                 </p>
               </div>
               <div className="bg-[#F9FBF5] border border-[#E6EED8] rounded-lg p-4 md:p-5 shadow-sm">
-                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">Website Copy That Converts</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">
+                  Website Copy That Converts
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  From practice area pages to service overviews, we write SEO-optimized copy that ranks, reads well, and drives action.
+                  From practice area pages to service overviews, we write
+                  SEO-optimized copy that ranks, reads well, and drives action.
                 </p>
               </div>
               <div className="bg-[#F9FBF5] border border-[#E6EED8] rounded-lg p-4 md:p-5 shadow-sm">
-                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">Email Campaigns & Newsletters</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">
+                  Email Campaigns & Newsletters
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  We help you stay top of mind with consistent communication that educates, nurtures, and converts your audience into clients.
+                  We help you stay top of mind with consistent communication
+                  that educates, nurtures, and converts your audience into
+                  clients.
                 </p>
               </div>
               <div className="bg-[#F9FBF5] border border-[#E6EED8] rounded-lg p-4 md:p-5 shadow-sm">
-                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">Guides & Whitepapers</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">
+                  Guides & Whitepapers
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  We create educational assets that position your firm as a thought leader—like “The Business Owner’s Guide to Employment Law in New York” or “How to Protect Your Firm from ADA Website Lawsuits.”
+                  We create educational assets that position your firm as a
+                  thought leader—like “The Business Owner’s Guide to Employment
+                  Law in New York” or “How to Protect Your Firm from ADA Website
+                  Lawsuits.”
                 </p>
               </div>
               <div className="bg-[#F9FBF5] border border-[#E6EED8] rounded-lg p-4 md:p-5 shadow-sm">
-                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">App & Web Development for Legal Brands</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-[#111] mb-2">
+                  App & Web Development for Legal Brands
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  We build user-friendly, conversion-focused websites and custom legal tech tools designed to attract clients and streamline your operations.
+                  We build user-friendly, conversion-focused websites and custom
+                  legal tech tools designed to attract clients and streamline
+                  your operations.
                 </p>
               </div>
             </div>

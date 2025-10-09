@@ -15,7 +15,7 @@ const HeroSection = () => {
         </ScrollAnimationWrapper>
         
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
-          <p className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl text-[#050706] max-w-none sm:max-w-3xl lg:px-5 leading-relaxed font-normal">
+          <p className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 text-base sm:text-lg md:text-xl lg:text-xl xl:text-lg text-[#050706] max-w-none sm:max-w-3xl lg:px-5 leading-relaxed font-normal">
           We help law firms and legal tech companies attract better clients, rank higher online, and convert more leads through marketing built for the legal industry.
           </p>
         </ScrollAnimationWrapper>

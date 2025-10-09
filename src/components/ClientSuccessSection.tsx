@@ -46,40 +46,44 @@ const ClientSuccessSection = () => {
           </div>
         </ScrollAnimationWrapper>
 
-        {/* Success Stories Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {successStories.map((story, index) => (
-            <ScrollAnimationWrapper 
-              key={index} 
-              animationType="slideUp" 
-              delay={0.3 + (index * 0.1)}
-            >
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                {/* Key Metric */}
-                <div className="text-center mb-6">
-                  <div className={`text-6xl font-extrabold ${story.color} mb-2`}>
-                    {story.metric}
-                  </div>
-                  <div className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
-                    {story.metricLabel}
-                  </div>
+        {/* Unified Success Box */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.3}>
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            {/* Combined Figures (single block) */}
+            <div className="mb-8">
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-extrabold text-gray-900">
+                  {successStories.map((story, index) => (
+                    <span key={index} className="inline-flex items-baseline">
+                      <span className={`${story.color}`}>{story.metric}</span>
+                      <span className="text-gray-700 ml-2 mr-2">{story.metricLabel}</span>
+                      {index < successStories.length - 1 && (
+                        <span className="mx-2 text-gray-300">•</span>
+                      )}
+                    </span>
+                  ))}
                 </div>
-
-                {/* Client Type */}
-                <h3 className="text-lg font-bold text-gray-900 mb-6 text-center">
-                  {story.clientType}
-                </h3>
-
-                {/* Compact details */}
-                <div className="space-y-3 text-gray-700">
-                  <p><span className="font-semibold text-gray-900">Challenge:</span> {story.challenge}</p>
-                  <p><span className="font-semibold text-gray-900">Approach:</span> {story.approach}</p>
-                  <p><span className="font-semibold text-gray-900">Result:</span> {story.result}</p>
-                </div>
+                <div className="text-sm md:text-base text-gray-600 mt-2">Across multiple practice areas and firm sizes</div>
               </div>
-            </ScrollAnimationWrapper>
-          ))}
-        </div>
+            </div>
+
+            <div className="h-px bg-gray-100 mb-8" />
+
+            {/* Compact Story Snapshots */}
+            <div className="grid md:grid-cols-3 gap-6 text-gray-700">
+              {successStories.map((story, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                  <h3 className="text-base font-bold text-gray-900 mb-3">{story.clientType}</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li><span className="font-semibold text-gray-900">Challenge:</span> {story.challenge}</li>
+                    <li><span className="font-semibold text-gray-900">Approach:</span> {story.approach}</li>
+                    <li><span className="font-semibold text-gray-900">Result:</span> {story.result}</li>
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollAnimationWrapper>
       </div>
     </section>
   );

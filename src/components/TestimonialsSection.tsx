@@ -1,23 +1,29 @@
 import ScrollAnimationWrapper from './ScrollAnimationWrapper';
 
 const testimonials = [
+  // {
+  //   company: 'Hartwell & Co.',
+  //   text: '“They rebuilt our site and content strategy. Consultations doubled in three months.”',
+  //   name: 'Rachel Hartwell',
+  //   title: 'Managing Partner',
+  // },
+  // {
+  //   company: 'Lexify Labs',
+  //   text: '“Clear messaging for a complex product. Demos up 140% and shorter sales cycles.”',
+  //   name: 'Ajay Prakash',
+  //   title: 'Founder & CEO',
+  // },
+  // {
+  //   company: 'Northside Family Law',
+  //   text: '“Local SEO + landing pages = steady qualified leads. Exactly what we needed.”',
+  //   name: 'Elena Ross',
+  //   title: 'Partner',
+  // },
   {
-    company: 'Hartwell & Co.',
-    text: '“They rebuilt our site and content strategy. Consultations doubled in three months.”',
-    name: 'Rachel Hartwell',
-    title: 'Managing Partner',
-  },
-  {
-    company: 'Lexify Labs',
-    text: '“Clear messaging for a complex product. Demos up 140% and shorter sales cycles.”',
-    name: 'Ajay Prakash',
-    title: 'Founder & CEO',
-  },
-  {
-    company: 'Northside Family Law',
-    text: '“Local SEO + landing pages = steady qualified leads. Exactly what we needed.”',
-    name: 'Elena Ross',
-    title: 'Partner',
+    company: 'Sweden',
+    text: '“Lawyal Tech consistently helps me generate leads and never misses an opportunity to connect me with the right people. The team stays proactive, works closely with me, and is fully committed to driving real results.”',
+    name: 'Marcus Eriksson',
+    title: 'Notary Public',
   },
 ];
 

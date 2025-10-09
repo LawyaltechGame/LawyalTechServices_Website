@@ -8,7 +8,7 @@ const HowItWorksSection = lazy(() => import('../components/HowItWorksSection'));
 const OurPeopleSection = lazy(() => import('../components/OurPeopleSection'));
 const ClientSuccessSection = lazy(() => import('../components/ClientSuccessSection'));
 const BenefitsSection = lazy(() => import('../components/BenefitsSection'));
-const TheyBelieveInUsSection = lazy(() => import('../components/TheyBelieveInUsSection'));
+// const TheyBelieveInUsSection = lazy(() => import('../components/TheyBelieveInUsSection'));
 const TestimonialsSection = lazy(() => import('../components/TestimonialsSection'));
 const ContactUsSection = lazy(() => import('../components/ContactUsSection'));
 const Footer = lazy(() => import('../components/Footer'));
@@ -25,7 +25,7 @@ const Home = () => {
         <OurPeopleSection />
         <ClientSuccessSection />
         <BenefitsSection />
-        <TheyBelieveInUsSection />
+        {/* <TheyBelieveInUsSection /> */}
         <TestimonialsSection />
         <ContactUsSection />
         <Footer />
