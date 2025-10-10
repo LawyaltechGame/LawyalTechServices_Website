@@ -1,9 +1,30 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 import { Link } from 'react-router-dom';
 
 const WhitepapersGuides = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Whitepapers & Guides"
+        description="Whitepapers and guides for law firms: lead magnets that build authority and generate qualified leads."
+        canonical="https://www.lawyaltech.org/whitepapers-guides"
+        keywords={["law firm whitepapers", "legal guides", "lead magnets for lawyers"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/whitepapers-guides',
+          title: 'Whitepapers & Guides — Lawyal Tech',
+          description: 'Deep-dive resources that attract and convert.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "Whitepapers & Guides", "item": "https://www.lawyaltech.org/whitepapers-guides"}
+        ]
+      }} />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

@@ -1,10 +1,33 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const Services = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Services"
+        description="Services for law firms: thought leadership, case studies, website copy, email campaigns, whitepapers, blogs, and more."
+        canonical="https://www.lawyaltech.org/services"
+        keywords={[
+          'law firm services', 'legal content services', 'law firm marketing'
+        ]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/services',
+          title: 'Services — Lawyal Tech',
+          description: 'Strategic, compliant digital content services for law firms.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.lawyaltech.org/services"}
+        ]
+      }} />
       {/* Header Section – minimal, left-aligned to differ from detail pages */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-12 text-center">

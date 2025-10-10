@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { fetchPostBySlug, formatDate, getFeaturedImage } from "../lib/wp";
 import type { WpPost } from "../lib/wp";
+import SEO from "../components/SEO";
+import JsonLd from "../components/JsonLd";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -81,6 +83,35 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title={post.title.rendered.replace(/<[^>]+>/g, '')}
+        description={post.excerpt?.rendered ? post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 155) : `Article by ${authorName} — published ${formatDate(post.date)}.`}
+        canonical={`https://www.lawyaltech.org/blog/${slug}`}
+        keywords={["legal blog", "law firm articles", "legal insights"]}
+        openGraph={{
+          url: `https://www.lawyaltech.org/blog/${slug}`,
+          title: post.title.rendered.replace(/<[^>]+>/g, ''),
+          description: post.excerpt?.rendered ? post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 160) : undefined
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://www.lawyaltech.org/blog/${slug}`
+        },
+        "headline": post.title.rendered.replace(/<[^>]+>/g, ''),
+        "datePublished": post.date,
+        "dateModified": post.modified || post.date,
+        "author": [{ "@type": "Person", "name": authorName }],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Lawyal Tech",
+          "logo": { "@type": "ImageObject", "url": "https://www.lawyaltech.org/COLOR%20LOGO.png" }
+        },
+        ...(featured.src ? { "image": featured.src } : {})
+      }} />
       {/* Header */}
       <div className="bg-[#B9CEFF] py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">

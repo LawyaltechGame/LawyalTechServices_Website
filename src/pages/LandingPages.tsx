@@ -1,16 +1,28 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const LandingPages = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Landing Pages"
+        description="High-converting landing pages for legal campaigns: clear messaging, focused CTAs, and SEO-friendly structure."
+        canonical="https://www.lawyaltech.org/landing-pages"
+        keywords={["law firm landing pages", "legal PPC landing page", "conversion pages for lawyers"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/landing-pages',
+          title: 'Landing Pages — Lawyal Tech',
+          description: 'Campaign-specific pages designed to convert.'
+        }}
+      />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Landing Pages</h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              High-converting landing pages designed to capture leads and drive results
+              Conversion-optimized pages tailored for campaigns and practice-area promotions
             </p>
           </ScrollAnimationWrapper>
         </div>

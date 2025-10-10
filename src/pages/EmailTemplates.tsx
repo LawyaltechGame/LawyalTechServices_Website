@@ -1,9 +1,30 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 import { Link } from 'react-router-dom';
 
 const EmailTemplates = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Email Campaigns & Newsletters"
+        description="Professional email campaigns and newsletters for law firms: templates, sequences, and on-brand content."
+        canonical="https://www.lawyaltech.org/email-templates"
+        keywords={["law firm email marketing", "legal newsletters", "email templates for lawyers"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/email-templates',
+          title: 'Email Campaigns & Newsletters — Lawyal Tech',
+          description: 'Stay top of mind with consistent, persuasive emails.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "Email Campaigns", "item": "https://www.lawyaltech.org/email-templates"}
+        ]
+      }} />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

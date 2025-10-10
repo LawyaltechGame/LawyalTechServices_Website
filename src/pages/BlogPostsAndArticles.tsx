@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { fetchPosts, formatDate, getFeaturedImage, WP_BASE } from "../lib/wp";
 import type { WpPost } from "../lib/wp";
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 
 const BlogPostsAndArticles = () => {
   const [activeTab, setActiveTab] = useState("blogs");
@@ -57,6 +59,30 @@ const BlogPostsAndArticles = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Blog Posts & Articles"
+        description="SEO-driven legal blogs and articles for law firms: strategy, writing, visuals, and publishing to build authority and attract clients."
+        canonical="https://www.lawyaltech.org/blog-posts"
+        keywords={[
+          'legal blogs',
+          'law firm articles',
+          'SEO for law firms',
+          'legal content strategy'
+        ]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/blog-posts',
+          title: 'Blog Posts & Articles — Lawyal Tech',
+          description: 'SEO-driven blogging for law firms: plan, write, and publish with confidence.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog Posts & Articles", "item": "https://www.lawyaltech.org/blog-posts"}
+        ]
+      }} />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

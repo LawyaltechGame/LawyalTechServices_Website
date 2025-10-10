@@ -1,9 +1,21 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 const CaseStudies = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Case Studies & Client Success Stories"
+        description="Case studies and client success stories for law firms that demonstrate results and build trust."
+        canonical="https://www.lawyaltech.org/case-studies"
+        keywords={["law firm case studies", "client success stories", "legal whitepapers"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/case-studies',
+          title: 'Case Studies & Client Success — Lawyal Tech',
+          description: 'Prove credibility with stories that matter.'
+        }}
+      />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

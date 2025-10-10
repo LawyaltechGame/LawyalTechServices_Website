@@ -2,6 +2,7 @@ export const WP_BASE = "https://lawyaltech.org";
 
 export type WpMedia = { source_url?: string; alt_text?: string };
 export type WpPost = {
+  modified: string;
   id: number;
   date: string;
   slug: string;

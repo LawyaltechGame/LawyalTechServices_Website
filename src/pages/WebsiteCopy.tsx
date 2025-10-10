@@ -1,9 +1,30 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 import { Link } from 'react-router-dom';
 
 const WebsiteCopy = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Website & Practice Area Copywriting"
+        description="Compelling, SEO-optimized website and practice area copy for law firms that converts visitors into clients."
+        canonical="https://www.lawyaltech.org/website-copy"
+        keywords={["law firm website copy", "practice area copywriting", "legal copywriting"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/website-copy',
+          title: 'Website & Practice Area Copywriting — Lawyal Tech',
+          description: 'SEO-focused copy that builds credibility and drives inquiries.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "Website Copy", "item": "https://www.lawyaltech.org/website-copy"}
+        ]
+      }} />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

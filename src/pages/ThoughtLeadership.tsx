@@ -1,9 +1,30 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 import { Link } from 'react-router-dom';
 
 const ThoughtLeadership = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Thought Leadership Articles"
+        description="Thought leadership for law firms: articles, LinkedIn posts, and op-eds that build authority and attract clients."
+        canonical="https://www.lawyaltech.org/thought-leadership"
+        keywords={["legal thought leadership", "law firm articles", "LinkedIn for lawyers"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/thought-leadership',
+          title: 'Thought Leadership Articles — Lawyal Tech',
+          description: 'Publish with consistency and grow authority.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "Thought Leadership", "item": "https://www.lawyaltech.org/thought-leadership"}
+        ]
+      }} />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

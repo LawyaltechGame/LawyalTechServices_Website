@@ -1,9 +1,30 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 import { Link } from 'react-router-dom';
 
 const AppDevelopment = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="App Development"
+        description="Custom app and tool development for legal brands: lead capture, client intake, and operational tools."
+        canonical="https://www.lawyaltech.org/app-development"
+        keywords={["legal app development", "law firm tools", "legal tech apps"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/app-development',
+          title: 'App Development — Lawyal Tech',
+          description: 'Build tools that streamline operations and win clients.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "App Development", "item": "https://www.lawyaltech.org/app-development"}
+        ]
+      }} />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

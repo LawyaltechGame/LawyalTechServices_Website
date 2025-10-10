@@ -1,16 +1,28 @@
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const CustomLegalApps = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Custom Legal Apps"
+        description="Custom legal apps for law firms: intake, calculators, and tools that improve client experience and operations."
+        canonical="https://www.lawyaltech.org/custom-legal-apps"
+        keywords={["custom legal apps", "law firm calculators", "legal tools"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/custom-legal-apps',
+          title: 'Custom Legal Apps — Lawyal Tech',
+          description: 'Build tools tailored to your legal workflows.'
+        }}
+      />
       {/* Header Section */}
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Custom Legal Apps</h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Tailored software solutions designed specifically for legal professionals
+              Bespoke tools that streamline client intake, case workflows, and lead capture
             </p>
           </ScrollAnimationWrapper>
         </div>

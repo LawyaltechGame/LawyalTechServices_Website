@@ -1,8 +1,29 @@
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
+import JsonLd from "../components/JsonLd";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-[#F8FAF5]">
+      <SEO 
+        title="About"
+        description="About Lawyal Tech — legal marketing partners for law firms and legal tech brands, focused on measurable growth and authority."
+        canonical="https://www.lawyaltech.org/about"
+        keywords={["about lawyal tech", "legal marketing agency", "law firm growth"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/about',
+          title: 'About — Lawyal Tech',
+          description: 'We help law firms grow with credible, compliant, conversion-focused marketing.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "About", "item": "https://www.lawyaltech.org/about"}
+        ]
+      }} />
       <div className="pt-20 px-4 md:px-10">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-[#111] mb-6 md:mb-8 font-poppins text-center md:text-left">

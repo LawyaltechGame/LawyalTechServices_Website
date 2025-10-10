@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 
 const Contact = () => {
   const [submitting] = useState(false);
@@ -13,6 +15,25 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAF5]">
+      <SEO 
+        title="Contact"
+        description="Contact Lawyal Tech — discuss your goals for thought leadership, case studies, website copy, and more."
+        canonical="https://www.lawyaltech.org/contact"
+        keywords={["contact lawyal tech", "legal marketing contact"]}
+        openGraph={{
+          url: 'https://www.lawyaltech.org/contact',
+          title: 'Contact — Lawyal Tech',
+          description: 'Get in touch to plan authority-building content for your firm.'
+        }}
+      />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lawyaltech.org/"},
+          {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.lawyaltech.org/contact"}
+        ]
+      }} />
       <div className="pt-20 px-4 md:px-10">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-[#111] mb-4 md:mb-8 font-poppins text-center">Contact Us</h1>
