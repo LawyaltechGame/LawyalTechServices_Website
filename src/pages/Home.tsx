@@ -7,7 +7,7 @@ const LawFirmWebsiteDesignSection = lazy(() => import('../components/LawFirmWebs
 const BelowHeroSection = lazy(() => import('../components/BelowHeroSection'));
 const WhatWeDoSection = lazy(() => import('../components/WhatWeDoSection'));
 const HowItWorksSection = lazy(() => import('../components/HowItWorksSection'));
-const OurPeopleSection = lazy(() => import('../components/OurPeopleSection'));
+// const OurPeopleSection = lazy(() => import('../components/OurPeopleSection'));
 const ClientSuccessSection = lazy(() => import('../components/ClientSuccessSection'));
 const BenefitsSection = lazy(() => import('../components/BenefitsSection'));
 // const TheyBelieveInUsSection = lazy(() => import('../components/TheyBelieveInUsSection'));

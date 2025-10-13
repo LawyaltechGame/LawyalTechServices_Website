@@ -25,7 +25,7 @@ export const generateOGImageUrl = (data: OGImageData): string => {
 };
 
 // Predefined OG image templates for different page types
-export const getOGImageData = (pageType: string, pageData?: any): OGImageData => {
+export const getOGImageData = (pageType: string, _pageData?: any): OGImageData => {
   switch (pageType) {
     case 'home':
       return {
