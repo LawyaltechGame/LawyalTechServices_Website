@@ -11,6 +11,8 @@ const EmailTemplates = () => {
         description="Professional email campaigns and newsletters for law firms: templates, sequences, and on-brand content."
         canonical="https://www.lawyaltech.org/email-templates"
         keywords={["law firm email marketing", "legal newsletters", "email templates for lawyers"]}
+        pageType="email-templates"
+        serviceName="Email Marketing"
         openGraph={{
           url: 'https://www.lawyaltech.org/email-templates',
           title: 'Email Campaigns & Newsletters — Lawyal Tech',

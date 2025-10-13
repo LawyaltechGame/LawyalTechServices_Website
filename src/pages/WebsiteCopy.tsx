@@ -11,6 +11,8 @@ const WebsiteCopy = () => {
         description="Compelling, SEO-optimized website and practice area copy for law firms that converts visitors into clients."
         canonical="https://www.lawyaltech.org/website-copy"
         keywords={["law firm website copy", "practice area copywriting", "legal copywriting"]}
+        pageType="website-copy"
+        serviceName="Website Copy"
         openGraph={{
           url: 'https://www.lawyaltech.org/website-copy',
           title: 'Website & Practice Area Copywriting — Lawyal Tech',

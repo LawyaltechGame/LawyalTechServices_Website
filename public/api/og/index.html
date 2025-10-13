@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        
+        .og-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            width: 80px;
+            height: 80px;
+            background: #D2DE26;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: #1e3a8a;
+            z-index: 2;
+        }
+        
+        .content {
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .title {
+            font-size: 64px;
+            font-weight: 800;
+            color: white;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 32px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+            margin: 0 0 40px 0;
+            line-height: 1.2;
+        }
+        
+        .service-badge {
+            display: inline-block;
+            background: #D2DE26;
+            color: #1e3a8a;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+        }
+        
+        .author-info {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            color: rgba(255,255,255,0.8);
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .decorative-elements {
+            position: absolute;
+            top: 50%;
+            right: -100px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .decorative-elements::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(210, 222, 38, 0.1);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <div class="logo">LT</div>
+        <div class="content">
+            <div id="service-badge" class="service-badge" style="display: none;"></div>
+            <h1 id="title" class="title">Lawyal Tech</h1>
+            <p id="subtitle" class="subtitle">Digital Content for Law Firms</p>
+        </div>
+        <div id="author-info" class="author-info" style="display: none;"></div>
+        <div class="decorative-elements"></div>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title') || 'Lawyal Tech';
+        const subtitle = urlParams.get('subtitle') || 'Digital Content for Law Firms';
+        const type = urlParams.get('type') || 'home';
+        const service = urlParams.get('service') || '';
+        const author = urlParams.get('author') || '';
+        const date = urlParams.get('date') || '';
+
+        // Update content
+        document.getElementById('title').textContent = title;
+        document.getElementById('subtitle').textContent = subtitle;
+
+        // Show service badge for service pages
+        if (type === 'service-detail' && service) {
+            const badge = document.getElementById('service-badge');
+            badge.textContent = service;
+            badge.style.display = 'inline-block';
+        }
+
+        // Show author info for blog posts
+        if (author || date) {
+            const authorInfo = document.getElementById('author-info');
+            let info = '';
+            if (author) info += author;
+            if (date) info += (author ? ' • ' : '') + date;
+            authorInfo.textContent = info;
+            authorInfo.style.display = 'block';
+        }
+
+        // Adjust title size for longer text
+        const titleElement = document.getElementById('title');
+        if (title.length > 30) {
+            titleElement.style.fontSize = '48px';
+        } else if (title.length > 20) {
+            titleElement.style.fontSize = '56px';
+        }
+    </script>
+</body>
+</html>

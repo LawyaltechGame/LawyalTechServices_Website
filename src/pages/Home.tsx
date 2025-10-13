@@ -29,6 +29,7 @@ const Home = () => {
           'website copy for lawyers',
           'legal email campaigns'
         ]}
+        pageType="home"
         openGraph={{
           url: 'https://www.lawyaltech.org/',
           title: 'Lawyal Tech — Build Authority. Rank Higher. Win More Clients.',

@@ -88,6 +88,7 @@ const BlogPost = () => {
         description={post.excerpt?.rendered ? post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 155) : `Article by ${authorName} — published ${formatDate(post.date)}.`}
         canonical={`https://www.lawyaltech.org/blog/${slug}`}
         keywords={["legal blog", "law firm articles", "legal insights"]}
+        blogPost={post}
         openGraph={{
           url: `https://www.lawyaltech.org/blog/${slug}`,
           title: post.title.rendered.replace(/<[^>]+>/g, ''),

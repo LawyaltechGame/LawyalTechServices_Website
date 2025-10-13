@@ -20,6 +20,7 @@ const Contact = () => {
         description="Contact Lawyal Tech — discuss your goals for thought leadership, case studies, website copy, and more."
         canonical="https://www.lawyaltech.org/contact"
         keywords={["contact lawyal tech", "legal marketing contact"]}
+        pageType="contact"
         openGraph={{
           url: 'https://www.lawyaltech.org/contact',
           title: 'Contact — Lawyal Tech',

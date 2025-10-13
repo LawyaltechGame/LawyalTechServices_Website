@@ -10,6 +10,7 @@ const About = () => {
         description="About Lawyal Tech — legal marketing partners for law firms and legal tech brands, focused on measurable growth and authority."
         canonical="https://www.lawyaltech.org/about"
         keywords={["about lawyal tech", "legal marketing agency", "law firm growth"]}
+        pageType="about"
         openGraph={{
           url: 'https://www.lawyaltech.org/about',
           title: 'About — Lawyal Tech',

@@ -14,6 +14,7 @@ const Services = () => {
         keywords={[
           'law firm services', 'legal content services', 'law firm marketing'
         ]}
+        pageType="services"
         openGraph={{
           url: 'https://www.lawyaltech.org/services',
           title: 'Services — Lawyal Tech',
