@@ -31,130 +31,175 @@ const WebsiteCopy = () => {
       <div className="bg-[#D2DE26] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <ScrollAnimationWrapper animationType="slideUp" delay={0.2}>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Website & Practice Area Copywriting</h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Compelling website content that converts visitors into clients
-            </p>
+            <div className="inline-flex items-center gap-2 bg-white/70 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold mb-3 shadow-sm">
+              <span>Website Copy</span>
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-3">Website & Practice Area Copywriting</h1>
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">Turn site visits into <span className="text-[#0b0f0b] bg-[#D2DE26]/60 px-1 rounded">consultations</span>.</p>
+            <p className="text-lg text-gray-800 max-w-3xl mx-auto mt-2">We write high-converting website and practice area copy that clarifies your value, builds trust, improves SEO, and drives inquiries.</p>
           </ScrollAnimationWrapper>
         </div>
       </div>
 
-      {/* Service Overview Section */}
+      {/* Content */}
       <div className="max-w-7xl mx-auto px-4 py-16">
+        {/* Who + What */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.3}>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Your Website Deserves Copy That Converts Visitors Into Clients
-            </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              A beautifully designed website means little without words that inspire trust and action. 
-              Website copy is more than descriptions — it's your digital handshake, your story, and 
-              your chance to show potential clients why they should choose you.
-            </p>
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Who This Is For</h3>
+              <div className="h-1 w-16 bg-[#D2DE26] rounded-full mb-4"></div>
+              <ul className="pl-1 space-y-3 text-gray-700">
+                <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Boutique to mid-sized law firms that need clear, credible messaging</span></li>
+                <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Multi-office firms seeking consistency across practice areas and locations</span></li>
+                <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Legal tech brands that want conversion-focused site copy for product-led growth</span></li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">What You Get</h3>
+              <div className="h-1 w-16 bg-[#D2DE26] rounded-full mb-4"></div>
+              <ul className="pl-1 space-y-3 text-gray-700">
+                <li className="group flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Messaging & Positioning</span> — Value proposition, differentiators, proof points, tone of voice</span></li>
+                <li className="group flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Page-Level Strategy</span> — Information architecture suggestions and section-by-section outlines</span></li>
+                <li className="group flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Conversion Copy</span> — Home, About, Practice Area pages (and sub-practices), Attorney Bios, Locations, Resources, Contact</span></li>
+                <li className="group flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">SEO Foundations</span> — Keyword mapping, titles/meta, headings, internal linking recommendations</span></li>
+                <li className="group flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Compliance-Safe Language</span> — Clear, accurate copy with appropriate disclaimers where required</span></li>
+                <li className="group flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">UX Microcopy</span> — Buttons, forms, error states, chat prompts, and FAQ modules</span></li>
+                <li className="group flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Schema Recommendations</span> — Organization, LegalService, FAQ, Article, and Breadcrumb</span></li>
+              </ul>
+            </div>
           </div>
         </ScrollAnimationWrapper>
 
-        {/* Why It Matters Section */}
+        {/* Signature Sections We Write */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.35}>
+          <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Sections We Write</h3>
+            <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
+            <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Homepage hero + benefit grid + social proof</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Practice area overviews + sub-service pages</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Geo/location pages (city/state)</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Attorney and team bios that showcase credibility</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 md:col-span-2 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>About, Careers, and Contact pages</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 md:col-span-2 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Landing pages for campaigns and webinars</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 md:col-span-2 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Resource hub and pillar/cluster pages</span></li>
+            </ul>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* Our Process */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Why It Matters for Law Firms
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center p-6 rounded-lg bg-gray-50">
-                <div className="text-4xl mb-4">⚡</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Quick Judgments</h4>
-                <p className="text-gray-700">Clients make judgments within seconds of landing on your site</p>
-              </div>
-              <div className="text-center p-6 rounded-lg bg-gray-50">
-                <div className="text-4xl mb-4">📞</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Boosts Bookings</h4>
-                <p className="text-gray-700">Clear, persuasive messaging boosts consultation bookings</p>
-              </div>
-              <div className="text-center p-6 rounded-lg bg-gray-50">
-                <div className="text-4xl mb-4">🔍</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Improves SEO</h4>
-                <p className="text-gray-700">Properly structured copy improves SEO and readability</p>
-              </div>
-              <div className="text-center p-6 rounded-lg bg-gray-50">
-                <div className="text-4xl mb-4">👑</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Builds Authority</h4>
-                <p className="text-gray-700">Builds authority in competitive practice areas</p>
-              </div>
-            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h3>
+            <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
+            <ul className="pl-1 space-y-3 max-w-5xl mx-auto text-gray-700">
+              <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Discovery</span> — Intake, competitor review, analytics/SEO scan, and goals alignment</span></li>
+              <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Messaging Workshop</span> — ICPs, proof assets, tone, and positioning</span></li>
+              <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">UX & SEO Plan</span> — IA notes, keyword map, and internal link strategy</span></li>
+              <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Wireframe Outlines</span> — Section-by-section blueprint with CTAs and proof modules</span></li>
+              <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Drafting</span> — Conversion-first copy tailored to your brand and practice nuances</span></li>
+              <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">SEO Polish</span> — Titles, meta descriptions, H1/H2s, internal links, schema suggestions</span></li>
+              <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Review & Revisions</span> — Two rounds to lock accuracy, tone, and compliance</span></li>
+              <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Handoff & Launch Support</span> — Paste-ready docs, CMS formatting notes, and pre-launch QA checklist</span></li>
+            </ul>
           </div>
         </ScrollAnimationWrapper>
 
-        {/* Our Process Section */}
+        {/* Deliverables (per page) */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.45}>
+          <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per page)</h3>
+            <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
+            <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Final copy (doc or CMS-ready)</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Target keyword(s) + search intent</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Title tag, meta description, and recommended H1/H2s</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>CTA options and anchor text suggestions</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 md:col-span-2 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Internal linking list</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 md:col-span-2 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Optional: wireframe annotations and FAQ set</span></li>
+            </ul>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* Optional Add-Ons */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.5}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Our Process (Audit → Strategy → Design)
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-[#B9CEFF] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-gray-900">1</span>
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Audit</h4>
-                <p className="text-gray-700">Analyze your current site messaging and competitors.</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-[#B9CEFF] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-gray-900">2</span>
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Strategy</h4>
-                <p className="text-gray-700">Create a tone of voice guide that aligns with your brand.</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-[#B9CEFF] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-gray-900">3</span>
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Design (Execution)</h4>
-                <p className="text-gray-700">Write and refine copy for each page, optimized for clarity and conversions.</p>
-              </div>
-            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Optional Add-Ons</h3>
+            <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
+            <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Attorney bio interviews and writing</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Multi-location page rollouts and local SEO plan</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Design collaboration (wireframes/prototypes)</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Accessibility language review</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 md:col-span-2 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Multilingual versions</span></li>
+            </ul>
           </div>
         </ScrollAnimationWrapper>
 
-        {/* Deliverables Section */}
+        {/* Outcomes */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.55}>
+          <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h3>
+            <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
+            <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Clear differentiation and stronger authority signals</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Higher engagement and conversion on key pages</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Better visibility for priority practice areas and locations</span></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Shorter path from first visit to consultation</span></li>
+            </ul>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* Plans */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Deliverables</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="text-3xl mb-3">🏠</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Core Pages</h4>
-                <p className="text-gray-700">Homepage, About, and Contact page copy</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Essentials</h4>
+                  <p className="text-gray-700">5-page core pack (Home, About, 2 Practice Areas, Contact) with SEO basics</p>
+                </div>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="text-3xl mb-3">⚖️</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Service Pages</h4>
-                <p className="text-gray-700">Service / practice area page content</p>
+              <div className="rounded-2xl border border-[#D2DE26] bg-white shadow-md hover:shadow-xl ring-2 ring-[#D2DE26]/40 transition-shadow">
+                <div className="h-1.5 w-full bg-[#D2DE26] rounded-t-2xl" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Growth</h4>
+                  <p className="text-gray-700">12-page practice cluster (3 primary areas + 6 subpages + Locations + About + Contact) with FAQs and schema recommendations</p>
+                </div>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="text-3xl mb-3">🎯</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Optimized CTAs</h4>
-                <p className="text-gray-700">Conversion-optimized CTAs across the site</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="text-3xl mb-3">🚀</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Landing Pages</h4>
-                <p className="text-gray-700">Optional: High-converting landing pages for campaigns</p>
+              <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Authority+</h4>
+                  <p className="text-gray-700">25+ page site build/relaunch, including practice taxonomy, bios, locations, resource hub, and launch QA</p>
+                </div>
               </div>
             </div>
           </div>
         </ScrollAnimationWrapper>
 
-        {/* CTA Section */}
+        {/* FAQs */}
+        <ScrollAnimationWrapper animationType="slideUp" delay={0.65}>
+          <div className="bg-white rounded-2xl p-8 shadow-xl mb-8">
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h3>
+            <ul className="pl-1 space-y-4 text-gray-700 max-w-4xl mx-auto">
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">How do you ensure accuracy and compliance?</h4><p className="text-gray-700">We collaborate with your attorneys for approvals, use jurisdiction-appropriate disclaimers, and avoid misleading claims or guarantees.</p></div></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Can you work in our CMS?</h4><p className="text-gray-700">Yes—WordPress, Webflow, HubSpot, or your preferred platform. We provide paste-ready copy and formatting notes.</p></div></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Do you interview attorneys and subject-matter experts?</h4><p className="text-gray-700">Yes. We run focused interviews or work from briefs and past materials.</p></div></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">What about keyword research?</h4><p className="text-gray-700">Every page includes a keyword map, search intent, and on-page optimization recommendations.</p></div></li>
+              <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">How many revisions are included?</h4><p className="text-gray-700">Two rounds per page to finalize tone, substance, and positioning.</p></div></li>
+            </ul>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* CTA */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.7}>
           <div className="text-center bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Clear, persuasive copy that turns visitors into clients.
-            </h3>
-            <p className="text-lg text-gray-700 mb-6">
-              We write website content that aligns with your brand and converts.
-            </p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to turn your website into a client-winning asset?</h3>
+            <p className="text-lg text-gray-700 mb-6">Book a Website Copy Audit now!</p>
             <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-full bg-[#050706] text-[#D2DE26] border-none cursor-pointer transition-all duration-300 hover:bg-[#0a0d0a] hover:scale-105 transform shadow-lg">
               Get Started Today
             </Link>

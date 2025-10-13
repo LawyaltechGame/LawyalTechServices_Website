@@ -61,7 +61,7 @@ const Home = () => {
         <BelowHeroSection />
         <WhatWeDoSection />
         <HowItWorksSection />
-        <OurPeopleSection />
+        {/* <OurPeopleSection /> */}
         <ClientSuccessSection />
         <BenefitsSection />
         {/* <TheyBelieveInUsSection /> */}
