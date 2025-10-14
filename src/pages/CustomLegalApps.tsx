@@ -6,14 +6,14 @@ const CustomLegalApps = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title="Custom Legal Apps"
-        description="Custom legal apps for law firms: intake, calculators, and tools that improve client experience and operations."
+        title="Custom Legal Apps for Law Firms — Lawyal Tech"
+        description="Custom legal apps for law firms by Lawyal Tech: intake automation, workflows, calculators, and tools that improve client experience and operations."
         canonical="https://www.lawyaltech.org/custom-legal-apps"
         keywords={["custom legal apps", "law firm calculators", "legal tools"]}
         openGraph={{
           url: 'https://www.lawyaltech.org/custom-legal-apps',
-          title: 'Custom Legal Apps — Lawyal Tech',
-          description: 'Build tools tailored to your legal workflows.'
+          title: 'Custom Legal Apps for Law Firms — Lawyal Tech',
+          description: 'Custom legal apps for law firms: build tools tailored to your legal workflows.'
         }}
       />
       {/* Header Section */}
@@ -66,7 +66,7 @@ const CustomLegalApps = () => {
         {/* Signature App Types */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.36}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature App Types</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature App Types</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
               <div className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5">➜</span><span>Client Intake & Conflict Check portals</span></div>
@@ -85,7 +85,7 @@ const CustomLegalApps = () => {
         {/* Our Process */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.5}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="pl-1 space-y-3 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl leading-6 mt-0.5">➜</span><span><span className="font-semibold">Discovery</span> — Goals, risks, systems, and success metrics</span></li>
@@ -103,7 +103,7 @@ const CustomLegalApps = () => {
         {/* Deliverables */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.56}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per build)</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per build)</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="pl-1 space-y-3 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5">➜</span><span>PRD and user story backlog</span></li>
@@ -119,7 +119,7 @@ const CustomLegalApps = () => {
         {/* Outcomes */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="text-center p-6 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
@@ -154,7 +154,7 @@ const CustomLegalApps = () => {
         {/* Plans */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.64}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
@@ -184,7 +184,7 @@ const CustomLegalApps = () => {
         {/* FAQs */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.68}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
             <ul className="pl-1 space-y-4 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl leading-6 mt-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Do you build mobile apps?</h4><p className="text-gray-700">We deliver responsive web apps (PWA-ready). Native mobile can be scoped if required.</p></div></li>
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl leading-6 mt-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Where is it hosted?</h4><p className="text-gray-700">Your cloud (AWS, Azure, GCP) or on-prem—set up with environments, monitoring, and backups. Data residency requirements are supported.</p></div></li>

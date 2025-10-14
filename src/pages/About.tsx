@@ -6,15 +6,15 @@ const About = () => {
   return (
     <div className="min-h-screen bg-[#F8FAF5]">
       <SEO 
-        title="About"
-        description="About Lawyal Tech — legal marketing partners for law firms and legal tech brands, focused on measurable growth and authority."
+        title="About Lawyal Tech — Law Firm Content Marketing"
+        description="About Lawyal Tech — law firm content marketing partners for firms and legal tech brands, focused on measurable growth and authority."
         canonical="https://www.lawyaltech.org/about"
         keywords={["about lawyal tech", "legal marketing agency", "law firm growth"]}
         pageType="about"
         openGraph={{
           url: 'https://www.lawyaltech.org/about',
-          title: 'About — Lawyal Tech',
-          description: 'We help law firms grow with credible, compliant, conversion-focused marketing.'
+          title: 'About Lawyal Tech — Law Firm Content Marketing',
+          description: 'Law firm content marketing that helps firms grow with credible, compliant, conversion-focused programs.'
         }}
       />
       <JsonLd data={{

@@ -60,8 +60,8 @@ const BlogPostsAndArticles = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="Blog Posts & Articles"
-        description="SEO-driven legal blogs and articles for law firms: strategy, writing, visuals, and publishing to build authority and attract clients."
+        title="Blog Posts & Articles for Law Firms — Lawyal Tech"
+        description="SEO-driven blog posts and articles for law firms by Lawyal Tech: strategy, writing, visuals, and publishing to build authority and attract clients."
         canonical="https://www.lawyaltech.org/blog-posts"
         keywords={[
           'legal blogs',
@@ -71,8 +71,8 @@ const BlogPostsAndArticles = () => {
         ]}
         openGraph={{
           url: 'https://www.lawyaltech.org/blog-posts',
-          title: 'Blog Posts & Articles — Lawyal Tech',
-          description: 'SEO-driven blogging for law firms: plan, write, and publish with confidence.'
+          title: 'Blog Posts & Articles for Law Firms — Lawyal Tech',
+          description: 'Blog posts and articles for law firms: plan, write, and publish with confidence.'
         }}
       />
       <JsonLd data={{
@@ -91,7 +91,7 @@ const BlogPostsAndArticles = () => {
             <div className="inline-flex items-center gap-2 bg-white/70 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold mb-3 shadow-sm">
               <span>Blogs & Articles</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Blog Posts for Law Firms</h2>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Blog Posts for Law Firms</h1>
             <p className="text-lg text-gray-800">Turn your expertise into <span className="text-[#0b0f0b] bg-[#D2DE26]/60 px-1 rounded">authority</span>.</p>
             <p className="text-gray-800 leading-relaxed max-w-3xl mx-auto mt-2">
               We create SEO-driven blog posts that help you rank higher, earn trust, and attract qualified clients—without risking compliance or credibility.

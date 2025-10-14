@@ -7,14 +7,14 @@ const LeadMagnets = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title="Lead Magnets"
-        description="Lead magnet creation for law firms: guides, checklists, and resources paired with follow-up sequences."
+        title="Lead Magnets for Law Firms — Lawyal Tech"
+        description="Lead magnets for law firms by Lawyal Tech: guides, checklists, templates, calculators, and follow-up sequences that convert."
         canonical="https://www.lawyaltech.org/lead-magnets"
         keywords={["law firm lead magnets", "legal guides", "checklists for lawyers"]}
         openGraph={{
           url: 'https://www.lawyaltech.org/lead-magnets',
-          title: 'Lead Magnets — Lawyal Tech',
-          description: 'Design strategic resources that attract qualified prospects.'
+          title: 'Lead Magnets for Law Firms — Lawyal Tech',
+          description: 'Strategic legal resources that attract qualified prospects.'
         }}
       />
       <JsonLd data={{
@@ -72,7 +72,7 @@ const LeadMagnets = () => {
         {/* Signature Lead Magnet Types */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.36}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Lead Magnet Types</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Lead Magnet Types</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
               <div className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5">➜</span><span>Practical guides and checklists</span></div>
@@ -89,7 +89,7 @@ const LeadMagnets = () => {
         {/* Our Process */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.5}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="pl-1 space-y-3 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl leading-6 mt-0.5">➜</span><span><span className="font-semibold">Discovery</span> — Goals, ICPs, channels, and KPIs</span></li>
@@ -105,7 +105,7 @@ const LeadMagnets = () => {
         {/* Deliverables */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.56}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per asset)</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per asset)</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="pl-1 space-y-3 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5">➜</span><span>Final PDF or interactive asset (as appropriate)</span></li>
@@ -121,7 +121,7 @@ const LeadMagnets = () => {
         {/* Outcomes */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center p-6 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><div className="text-4xl mb-3">🎯</div><h4 className="text-lg font-semibold text-gray-900 mb-2">Qualified Inquiries</h4><p className="text-gray-700">More qualified inquiries and demos from the right audience</p></div>
@@ -135,7 +135,7 @@ const LeadMagnets = () => {
         {/* Plans */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.64}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
@@ -165,7 +165,7 @@ const LeadMagnets = () => {
         {/* FAQs */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.68}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
             <ul className="pl-1 space-y-4 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl leading-6 mt-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Which formats perform best?</h4><p className="text-gray-700">It depends on the audience and intent. Checklists, calculators, and short practical guides tend to convert fastest; deeper guides and webinar replays are great for higher-intent leads.</p></div></li>
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl leading-6 mt-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Do you also build the pages?</h4><p className="text-gray-700">Yes. We can deliver copy/design only or implement in your CMS/LP tool (WordPress, Webflow, HubSpot, Unbounce, etc.).</p></div></li>

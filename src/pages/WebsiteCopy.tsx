@@ -7,16 +7,16 @@ const WebsiteCopy = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title="Website & Practice Area Copywriting"
-        description="Compelling, SEO-optimized website and practice area copy for law firms that converts visitors into clients."
+        title="Website & Practice Area Copywriting for Law Firms — Lawyal Tech"
+        description="Website and practice area copywriting for law firms by Lawyal Tech: SEO-optimized, conversion-focused copy that builds trust and drives inquiries."
         canonical="https://www.lawyaltech.org/website-copy"
-        keywords={["law firm website copy", "practice area copywriting", "legal copywriting"]}
+        keywords={["law firm website copy", "practice area pages", "legal copywriting"]}
         pageType="website-copy"
         serviceName="Website Copy"
         openGraph={{
           url: 'https://www.lawyaltech.org/website-copy',
-          title: 'Website & Practice Area Copywriting — Lawyal Tech',
-          description: 'SEO-focused copy that builds credibility and drives inquiries.'
+          title: 'Website & Practice Area Copywriting for Law Firms — Lawyal Tech',
+          description: 'SEO-optimized legal copywriting that builds credibility and drives inquiries.'
         }}
       />
       <JsonLd data={{
@@ -74,7 +74,7 @@ const WebsiteCopy = () => {
         {/* Signature Sections We Write */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.35}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Sections We Write</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Sections We Write</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Homepage hero + benefit grid + social proof</span></li>
@@ -91,7 +91,7 @@ const WebsiteCopy = () => {
         {/* Our Process */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="pl-1 space-y-3 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Discovery</span> — Intake, competitor review, analytics/SEO scan, and goals alignment</span></li>
@@ -109,7 +109,7 @@ const WebsiteCopy = () => {
         {/* Deliverables (per page) */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.45}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per page)</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per page)</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Final copy (doc or CMS-ready)</span></li>
@@ -125,7 +125,7 @@ const WebsiteCopy = () => {
         {/* Optional Add-Ons */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.5}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Optional Add-Ons</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Optional Add-Ons</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Attorney bio interviews and writing</span></li>
@@ -140,7 +140,7 @@ const WebsiteCopy = () => {
         {/* Outcomes */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.55}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Clear differentiation and stronger authority signals</span></li>
@@ -154,7 +154,7 @@ const WebsiteCopy = () => {
         {/* Plans */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
@@ -184,7 +184,7 @@ const WebsiteCopy = () => {
         {/* FAQs */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.65}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
             <ul className="pl-1 space-y-4 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">How do you ensure accuracy and compliance?</h4><p className="text-gray-700">We collaborate with your attorneys for approvals, use jurisdiction-appropriate disclaimers, and avoid misleading claims or guarantees.</p></div></li>
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Can you work in our CMS?</h4><p className="text-gray-700">Yes—WordPress, Webflow, HubSpot, or your preferred platform. We provide paste-ready copy and formatting notes.</p></div></li>

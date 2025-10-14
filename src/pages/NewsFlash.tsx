@@ -4,14 +4,14 @@ const NewsFlash = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title="News Flash"
-        description="Latest updates and announcements from Lawyal Tech."
+        title="Lawyal Tech News & Updates"
+        description="Latest news, updates, and announcements from Lawyal Tech — legal marketing insights and releases."
         canonical="https://www.lawyaltech.org/news-flash"
         keywords={["lawyal tech news", "legal marketing updates"]}
         openGraph={{
           url: 'https://www.lawyaltech.org/news-flash',
-          title: 'News Flash — Lawyal Tech',
-          description: 'Updates, announcements, and releases.'
+          title: 'Lawyal Tech News & Updates',
+          description: 'Legal marketing updates, announcements, and releases from Lawyal Tech.'
         }}
       />
       {/* placeholder page */}

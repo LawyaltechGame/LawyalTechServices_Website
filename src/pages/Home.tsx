@@ -19,8 +19,8 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-[#f8faf5]" style={{overflow: 'visible'}}>
       <SEO 
-        title="Home"
-        description="We help law firms turn expertise into persuasive, compliant digital content that builds trust and drives qualified leads."
+        title="Law Firm Content Marketing — Lawyal Tech"
+        description="Law firm content marketing by Lawyal Tech: thought leadership, case studies, website copy, and email campaigns that build trust and generate qualified leads."
         canonical="https://www.lawyaltech.org/"
         keywords={[
           'law firm content marketing',
@@ -32,7 +32,7 @@ const Home = () => {
         pageType="home"
         openGraph={{
           url: 'https://www.lawyaltech.org/',
-          title: 'Lawyal Tech — Build Authority. Rank Higher. Win More Clients.',
+          title: 'Law Firm Content Marketing — Lawyal Tech',
           description: 'Strategic, compliant digital content for law firms.',
         }}
       />

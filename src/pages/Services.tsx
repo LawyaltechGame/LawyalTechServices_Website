@@ -8,8 +8,8 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title="Services"
-        description="Services for law firms: thought leadership, case studies, website copy, email campaigns, whitepapers, blogs, and more."
+        title="Services for Law Firms — Lawyal Tech"
+        description="Services for law firms at Lawyal Tech: thought leadership, case studies, website copy, email campaigns, whitepapers, and blogs that build authority and drive leads."
         canonical="https://www.lawyaltech.org/services"
         keywords={[
           'law firm services', 'legal content services', 'law firm marketing'
@@ -17,8 +17,8 @@ const Services = () => {
         pageType="services"
         openGraph={{
           url: 'https://www.lawyaltech.org/services',
-          title: 'Services — Lawyal Tech',
-          description: 'Strategic, compliant digital content services for law firms.'
+          title: 'Services for Law Firms — Lawyal Tech',
+          description: 'Law firm content marketing services: strategic, compliant digital content programs.'
         }}
       />
       <JsonLd data={{

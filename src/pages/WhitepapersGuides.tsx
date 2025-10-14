@@ -7,14 +7,14 @@ const WhitepapersGuides = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title="Whitepapers & Guides"
-        description="Whitepapers and guides for law firms: lead magnets that build authority and generate qualified leads."
+        title="Whitepapers & Guides for Law Firms — Lawyal Tech"
+        description="Whitepapers and guides for law firms by Lawyal Tech: research-backed lead magnets that build authority and generate qualified leads."
         canonical="https://www.lawyaltech.org/whitepapers-guides"
         keywords={["law firm whitepapers", "legal guides", "lead magnets for lawyers"]}
         openGraph={{
           url: 'https://www.lawyaltech.org/whitepapers-guides',
-          title: 'Whitepapers & Guides — Lawyal Tech',
-          description: 'Deep-dive resources that attract and convert.'
+          title: 'Whitepapers & Guides for Law Firms — Lawyal Tech',
+          description: 'Research-backed legal lead magnets that attract and convert.'
         }}
       />
       <JsonLd data={{
@@ -73,7 +73,7 @@ const WhitepapersGuides = () => {
         {/* Signature Formats */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.35}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Formats</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Formats</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Executive Whitepaper (12–24 pages)</span></li>
@@ -89,7 +89,7 @@ const WhitepapersGuides = () => {
         {/* Sample Titles */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Sample Titles</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Sample Titles</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>The Business Owner’s Guide to Employment Law in [State]</span></li>
@@ -103,7 +103,7 @@ const WhitepapersGuides = () => {
         {/* Our Process */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.45}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="pl-1 space-y-3 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Discovery & Outline</span> — Goals, ICPs, sources, and a detailed structure</span></li>
@@ -121,7 +121,7 @@ const WhitepapersGuides = () => {
         {/* Deliverables (per asset) */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.5}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per asset)</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per asset)</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Final PDF (print and screen versions)</span></li>
@@ -137,7 +137,7 @@ const WhitepapersGuides = () => {
         {/* Outcomes */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.55}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Higher-quality leads and faster sales cycles</span></li>
@@ -151,7 +151,7 @@ const WhitepapersGuides = () => {
         {/* Plans */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
@@ -181,7 +181,7 @@ const WhitepapersGuides = () => {
         {/* FAQs */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.65}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
             <ul className="pl-1 space-y-4 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">How long does a whitepaper or guide take?</h4><p className="text-gray-700">Typically 3–5 weeks from kickoff to launch, depending on scope and access to sources/SMEs.</p></div></li>
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Can you create jurisdiction-specific versions?</h4><p className="text-gray-700">Yes. We produce state or region variants and keep a shared master for consistent updates.</p></div></li>

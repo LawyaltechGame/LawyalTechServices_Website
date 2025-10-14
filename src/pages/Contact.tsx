@@ -16,14 +16,14 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-[#F8FAF5]">
       <SEO 
-        title="Contact"
+        title="Contact Lawyal Tech — Law Firm Content Marketing"
         description="Contact Lawyal Tech — discuss your goals for thought leadership, case studies, website copy, and more."
         canonical="https://www.lawyaltech.org/contact"
         keywords={["contact lawyal tech", "legal marketing contact"]}
         pageType="contact"
         openGraph={{
           url: 'https://www.lawyaltech.org/contact',
-          title: 'Contact — Lawyal Tech',
+          title: 'Contact Lawyal Tech — Law Firm Content Marketing',
           description: 'Get in touch to plan authority-building content for your firm.'
         }}
       />

@@ -7,16 +7,16 @@ const EmailTemplates = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title="Email Campaigns & Newsletters"
-        description="Professional email campaigns and newsletters for law firms: templates, sequences, and on-brand content."
+        title="Email Campaigns & Newsletters for Law Firms — Lawyal Tech"
+        description="Email campaigns and newsletters for law firms by Lawyal Tech: lifecycle sequences, newsletters, and templates that drive consultations and demos."
         canonical="https://www.lawyaltech.org/email-templates"
         keywords={["law firm email marketing", "legal newsletters", "email templates for lawyers"]}
         pageType="email-templates"
         serviceName="Email Marketing"
         openGraph={{
           url: 'https://www.lawyaltech.org/email-templates',
-          title: 'Email Campaigns & Newsletters — Lawyal Tech',
-          description: 'Stay top of mind with consistent, persuasive emails.'
+          title: 'Email Campaigns & Newsletters for Law Firms — Lawyal Tech',
+          description: 'Email marketing for law firms: plan, write, design, and automate programs that convert.'
         }}
       />
       <JsonLd data={{
@@ -74,7 +74,7 @@ const EmailTemplates = () => {
         {/* Signature Sequences */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.35}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Sequences</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Signature Sequences</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Intake Nurture (first consult to signed client)</span></li>
@@ -90,7 +90,7 @@ const EmailTemplates = () => {
         {/* Our Process */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.4}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Our Process</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="pl-1 space-y-3 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span><span className="font-semibold">Discovery & List Audit</span> — Goals, audience, current performance, data integrity</span></li>
@@ -107,7 +107,7 @@ const EmailTemplates = () => {
         {/* Deliverables (per campaign/program) */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.45}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per campaign/program)</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Deliverables (per campaign/program)</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Lifecycle map and flowchart</span></li>
@@ -124,7 +124,7 @@ const EmailTemplates = () => {
         {/* Outcomes */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.5}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Outcomes You Can Expect</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>More consultations, demos, and retained clients</span></li>
@@ -138,7 +138,7 @@ const EmailTemplates = () => {
         {/* Plans */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.55}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Plans</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="rounded-2xl border border-gray-200 bg-gray-50 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="h-1.5 w-full bg-gray-200 rounded-t-2xl" />
@@ -168,7 +168,7 @@ const EmailTemplates = () => {
         {/* Optional Add-Ons */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.6}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">Optional Add-Ons</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Optional Add-Ons</h2>
             <div className="h-1 w-16 bg-[#D2DE26] rounded-full mx-auto mb-6"></div>
             <ul className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto text-gray-700">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><span>Lead magnet creation and landing pages</span></li>
@@ -183,7 +183,7 @@ const EmailTemplates = () => {
         {/* FAQs */}
         <ScrollAnimationWrapper animationType="slideUp" delay={0.65}>
           <div className="bg-white rounded-2xl p-8 shadow-xl mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
             <ul className="pl-1 space-y-4 text-gray-700 max-w-4xl mx-auto">
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">How do you measure success?</h4><p className="text-gray-700">We prioritize reply rate, click-through, consultations/demos booked, and influenced revenue. (Open rates are de-emphasized due to tracking changes.)</p></div></li>
               <li className="group flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-gray-100 transition"><span className="text-[#a0b31f] text-xl mt-0.5 transition-transform group-hover:translate-x-0.5">➜</span><div><h4 className="font-semibold text-gray-900">Can you write for regulated practice areas?</h4><p className="text-gray-700">Yes. We include compliance review and required disclaimers where appropriate.</p></div></li>
