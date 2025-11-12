@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
+import GlobalJsonLd from './components/GlobalJsonLd';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -29,6 +30,7 @@ const ScrollToTop = () => {
 const App = () => {
   return (
     <Router>
+      <GlobalJsonLd />
       <ScrollToTop />
       <div className="min-h-screen bg-[#c3d0ff]">
         <Header />

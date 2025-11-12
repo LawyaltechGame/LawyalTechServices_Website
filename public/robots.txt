@@ -1,6 +1,36 @@
 User-agent: *
 Allow: /
+Allow: /ai.txt
+Allow: /llm.txt
+
+# OpenAI, Anthropic, Google DeepMind, and other AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow AI crawlers that don't respect terms (optional - adjust as needed)
+# User-agent: MJ12bot
+# Disallow: /
 
 Sitemap: https://www.lawyaltech.org/sitemap.xml
+Sitemap: https://www.lawyaltech.org/ai.txt
+Sitemap: https://www.lawyaltech.org/llm.txt
 
 

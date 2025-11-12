@@ -29,6 +29,52 @@ const Services = () => {
           {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.lawyaltech.org/services"}
         ]
       }} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you ensure accuracy and compliance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We collaborate with your attorneys for approvals, use jurisdiction-appropriate disclaimers, and avoid misleading claims or guarantees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work in our CMS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes—WordPress, Webflow, HubSpot, or your preferred platform. We provide paste-ready copy and formatting notes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you interview attorneys and subject-matter experts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We run focused interviews or work from briefs and past materials."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What about keyword research?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every page includes a keyword map, search intent, and on-page optimization recommendations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many revisions are included?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Two rounds per page to finalize tone, substance, and positioning."
+            }
+          }
+        ]
+      }} />
       {/* Header Section – minimal, left-aligned to differ from detail pages */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-12 text-center">
