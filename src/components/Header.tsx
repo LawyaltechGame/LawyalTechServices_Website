@@ -2,6 +2,13 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logoImage from '../Images/lawyaltech logo with name.png';
 
+type MenuItem = {
+  name: string;
+  path: string;
+  icon: string;
+  isExternal?: boolean;
+};
+
 const navLinks = [
   { label: 'HOME', href: '/', underline: false },
   { label: 'ABOUT', href: '/about' },
@@ -70,7 +77,7 @@ const Header = () => {
 
   const toggleMobile = () => setMobileOpen((v) => !v);
 
-  const services = [
+  const services: MenuItem[] = [
     { name: 'Thought Leadership Articles', path: '/thought-leadership', icon: '🧠' },
     { name: 'Case Studies & Client Success Stories', path: '/case-studies', icon: '📊' },
     { name: 'Website & Practice Area Copywriting', path: '/website-copy', icon: '🌐' },
@@ -84,7 +91,7 @@ const Header = () => {
     { name: 'Lead Magnets', path: '/lead-magnets', icon: '🧲' },
   ];
 
-  const products = [
+  const products: MenuItem[] = [
     { name: 'Contract Coder', path: 'https://services.lawyaltech.org/contract-coder/', icon: '💼', isExternal: true },
   ];
 
