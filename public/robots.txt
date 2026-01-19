@@ -30,6 +30,13 @@ Allow: /
 # Disallow: /
 
 Sitemap: https://www.lawyaltech.org/sitemap.xml
+
+# AI/LLM Optimization Files
+# These files contain structured data for AI systems and language models
+Allow: /ai.txt
+Allow: /llm.txt
+Allow: /data
+
 Sitemap: https://www.lawyaltech.org/ai.txt
 Sitemap: https://www.lawyaltech.org/llm.txt
 
