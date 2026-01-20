@@ -13,7 +13,7 @@ const navLinks = [
   { label: 'HOME', href: '/', underline: false },
   { label: 'ABOUT', href: '/about' },
   { label: 'SERVICES', href: '/services', hasDropdown: true },
-  { label: 'PRODUCTS', href: '/products', hasDropdown: true },
+  { label: 'PRODUCTS', href: '#', hasDropdown: true, dropdownOnly: true },
   // { label: 'NEWS FLASH', href: '/news-flash' },
   { label: 'CONTACT', href: '/contact' },
 ];
@@ -142,12 +142,20 @@ const Header = () => {
                 onMouseEnter={link.hasDropdown ? handleMouseEnter : undefined}
                 onMouseLeave={link.hasDropdown ? handleMouseLeave : undefined}
               >
-                <Link
-                  to={link.href}
-                  className={`text-[16px] lg:text-[18px] font-medium text-[#050706] pb-0.5 transition-all duration-300 hover:text-[#D2DE26] hover:scale-105 ${link.underline ? 'underline underline-offset-4 decoration-2' : 'hover:underline hover:underline-offset-4'} ${location.pathname === link.href ? 'text-[#D2DE26] underline underline-offset-4' : ''}`}
-                >
-                  {link.label}
-                </Link>
+                {link.dropdownOnly ? (
+                  <span
+                    className={`text-[16px] lg:text-[18px] font-medium text-[#050706] pb-0.5 transition-all duration-300 hover:text-[#D2DE26] hover:scale-105 cursor-pointer ${dropdownOpen ? 'text-[#D2DE26]' : ''}`}
+                  >
+                    {link.label}
+                  </span>
+                ) : (
+                  <Link
+                    to={link.href}
+                    className={`text-[16px] lg:text-[18px] font-medium text-[#050706] pb-0.5 transition-all duration-300 hover:text-[#D2DE26] hover:scale-105 ${link.underline ? 'underline underline-offset-4 decoration-2' : 'hover:underline hover:underline-offset-4'} ${location.pathname === link.href ? 'text-[#D2DE26] underline underline-offset-4' : ''}`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
                 {/* Dropdown for Services or Products */}
                 {link.hasDropdown && dropdownOpen && (
                   <div
